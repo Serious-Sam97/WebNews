@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('noticia/{id}', 'NoticiaController@index');
+Route::get('pessoa/{id}', 'PessoaController@index');
+Route::resource('pessoa', 'PessoaController');
