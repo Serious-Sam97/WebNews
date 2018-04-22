@@ -1,0 +1,190 @@
+
+.botaopreto{
+	color: white; 
+	text-decoration:none;
+}
+.botao{
+	background-color: #008CBA;
+    border: 2px solid blue;
+	border-radius:8px;
+}
+.login{
+	border: 0.3px solid black;
+    border-radius: 15px;
+    background-color: #6BB5F7;
+}
+
+h6{
+	text-align: center;	
+}
+
+.fonte{
+	font-family:arial;
+	color:black;
+}
+
+.fonteslide{
+	font-family:arial;
+	color:blue;
+}
+.rodapea{
+    position: absolute;
+    bottom:0;
+    width:100%;
+    color:#FFFFFF;
+    background-color:#0E67B6;
+}
+
+.rodaper{
+	position:relative;
+    bottom:0;
+    width:100%;
+    color:#FFFFFF;
+    background-color:#0E67B6;
+}
+
+div.inline {
+    display: inline-block;  
+	position: relative;
+    padding: 20px;
+    top: 30px;   
+}
+
+.img01{
+	border-style: solid;
+    border-width: 2px;
+	position: relative;
+    width: 400px;
+    height: 200px;
+}
+
+.txt{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color:black;
+	font-family:arial;
+	width: 300px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li.esquerda{
+    float: left;
+}
+
+li.entrar{
+    display: block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    float: right;
+}
+
+.imgicon{
+    text-align: right;
+    margin-top: 13px;
+    float:left;
+    width: 25px;
+    height: 25px;
+}
+
+li a.entrar{
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+    text-decoration:none;
+}
+
+.active {
+    background-color: #0E67B6;
+}
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #FFF;
+}
+
+.container:hover .overlay {
+  opacity: 0.6;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.carousel-inner img {
+    top: 0;
+   left: 0;
+   min-width: 100%;
+   
+   height: 450px;
+ }
+
+ article { 
+    display: block;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+	
+#footer {
+   position:relative;
+   bottom:0;
+   width:100%;
+   text-align:center
+}
