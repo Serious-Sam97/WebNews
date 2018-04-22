@@ -14,7 +14,6 @@ class NoticiaTable extends Migration
     public function up()
     {
         Schema::create('noticia', function (Blueprint $table) {
-            $table->charset = 'utf8';
             $table->increments('id');
             $table->string('header');
             $table->string('body');
