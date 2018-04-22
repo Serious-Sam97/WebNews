@@ -11,10 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::get('noticia/{id}', 'NoticiaController@index');
 Route::get('pessoa/{id}', 'PessoaController@index');
+
 Route::resource('pessoa', 'PessoaController');

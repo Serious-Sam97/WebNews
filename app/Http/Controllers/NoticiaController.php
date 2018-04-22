@@ -9,6 +9,10 @@ class NoticiaController extends Controller
     public function index(int $id) {
         //Buscar na tabela de noticias o copo baseado no id
         
-        return view('');
+        return view('noticiaTeste');
+    }
+
+    public function teste(){
+        return view('noticiaTeste');
     }
 }
