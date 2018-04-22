@@ -16,3 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('noticiaTeste','NoticiaController@index');
+
+Route::get('noticiaTeste','NoticiaController@caguei');
