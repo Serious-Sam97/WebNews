@@ -15,8 +15,8 @@ class RelacaoTable extends Migration
     {
         Schema::create('relacao', function (Blueprint $table) {
             $table->increments('id');
-            $table->foreign('noticia') ->references('noticia')->on('id');
-            $table->foreign('categoria') ->references('categoria')->on('id');
+            $table->foreign('noticia')->references('noticia')->on('id');
+            $table->foreign('categoria')->references('categoria')->on('id');
             $table->timestamps();
         });
     }
