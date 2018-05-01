@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class NoticiaTable extends Migration
+class CategoriaTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,9 @@ class NoticiaTable extends Migration
      */
     public function up()
     {
-        Schema::create('noticia', function (Blueprint $table) {
+        Schema::create('categoria', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('header');
-            $table->string('body');
-            $table->string('footer');
-            $table->string('imagem');
+            $table->string('nome');
             $table->timestamps();
         });
     }
@@ -30,6 +27,6 @@ class NoticiaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('noticia');
+        Schema::dropIfExists('categoria');
     }
 }

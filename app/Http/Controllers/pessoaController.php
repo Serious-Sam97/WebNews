@@ -14,11 +14,10 @@ class pessoa extends Controller
     public function store(Request $request)
     {
         $tudo = $request ->all();
-        $out = ['nome',  'email', 'nascimento', 'sexo'];
+        $out = ['nome',  'email', 'nascimento',];
             $out->name       = $tudo['name'];
             $out->email      = $tudo['email'];
             $out->nascimento = $tudo['nascimento'];
-            $out->sexo       = $tudo['sexo'];
         $out->save();
     }
 
@@ -29,7 +28,6 @@ class pessoa extends Controller
             $out->name       = $tudo['name'];
             $out->email      = $tudo['email'];
             $out->nascimento = $tudo['nascimento'];
-            $out->sexo       = $tudo['sexo'];
         $out->save();
     }
 
