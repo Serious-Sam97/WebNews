@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class relacao extends Model
 {
-    protected $table = 'noticia';
+    protected $table = 'relacao';
 
     protected $fillable = ['categoria','noticia'];
 }
