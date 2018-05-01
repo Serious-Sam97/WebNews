@@ -17,7 +17,7 @@ class PessoaTable extends Migration
             $table->increments('id');
             $table->string('nome');
             $table->string('email');
-            $table->string('nascimento');
+            $table->date('nascimento');
             $table->timestamps();
         });
     }
