@@ -15,6 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('noticiaTeste','NoticiaController@index');
-
-Route::get('noticiaTeste','NoticiaController@caguei');
+//Route::get('noticia/{id}', 'NoticiaController@index');
+Route::get('noticia', 'NoticiaController@index');

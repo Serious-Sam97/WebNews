@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class NoticiaController extends Controller
 {
     function index(){
-        return view("noticiaTeste");
+        return view("noticiaGenerica");
     }
 }
