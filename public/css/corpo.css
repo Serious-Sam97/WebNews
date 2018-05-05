@@ -1,4 +1,10 @@
+.invisivel{
+    display:none;
+}
 
+.cor:hover{
+    color:blue;
+}
 .botaopreto{
 	color: white; 
 	text-decoration:none;

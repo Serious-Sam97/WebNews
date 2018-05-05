@@ -16,3 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('noticiaTeste','NoticiaController@index');
+Route::get('pessoaCadastro','pessoaController@index');
+Route::get('pessoaCadastroUpdate','pessoaController@update');
+Route::get('pessoaCadastroStore','pessoaController@store');
