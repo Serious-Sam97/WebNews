@@ -3,10 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class NoticiaController extends Controller
 {
     function index(){
-        return view("noticiaTeste");
+        $imgLogo = 'portal.png';
+        //return \Illuminate\Support\Facades\View::make("noticiaGenerica")->with($imgLogo);
+        return \Illuminate\Support\Facades\View::make("noticiaGenerica", compact('imgLogo'));
     }
 }
