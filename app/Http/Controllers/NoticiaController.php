@@ -10,6 +10,6 @@ class NoticiaController extends Controller
     function index(){
         $imgLogo = 'portal.png';
         //return \Illuminate\Support\Facades\View::make("noticiaGenerica")->with($imgLogo);
-        return \Illuminate\Support\Facades\View::make("noticiaGenerica", compact('imgLogo'));
+        return \View::make('noticiaGenerica')->with('imgLogo', $imgLogo);
     }
 }
