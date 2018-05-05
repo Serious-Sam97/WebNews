@@ -20,6 +20,7 @@ class RelacaoTable extends Migration
             $table->timestamps();
         });
         */
+        //PUTA QUE PARIU
     }
 
     /**
