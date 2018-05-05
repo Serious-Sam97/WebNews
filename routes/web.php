@@ -15,5 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('pessoaCadastro','pessoaController@index');
+Route::get('pessoaCadastroUpdate','pessoaController@update');
+Route::get('pessoaCadastroStore','pessoaController@store');
 //Route::get('noticia/{id}', 'NoticiaController@index');
 Route::get('noticia', 'NoticiaController@index');
