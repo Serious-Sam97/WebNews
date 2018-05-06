@@ -24,7 +24,7 @@
         <div class ="row">
             <div class = "col-md-12" align = "center">
                 <br>
-                <a href="index.html"><img src = "{{ $imgLogo }}" class = "imglogo" ></a>
+                <a href="index.html"><img src = "{{ asset($imgLogo) }}" class = "imglogo" ></a>
             </div>
 
 </header>
