@@ -18,6 +18,20 @@
                 $(".login2").hide();
                 $(".invisivel").show();
             });
+
+            (".ajax").on("click",function(){
+                    $.ajax({
+
+                    type: "GET",
+                    url: "noticia",
+                    success: function (data) {
+                        console.log(data);
+                    },
+                    error: function (data) {
+                        console.log('Error:', data);
+                    }
+                });
+            });
         });
     </script>
 </head>
@@ -52,37 +66,37 @@
     <div class = "row">
         <div class = "col-md-12 fonte" align="center">
             <div class="invisivel">
-                <form>
+                <form action ="cadastrar">
                 <h1>Termine seu Cadastro</h1>
                 </br>
                 <p>O seu cadastro é muito importante para nós</p>
                 <label>Nome</label>
                 </br>
-                <input type="text" name="nome" placeholder="Digite aqui seu Nome"/>
+                <input type="text" name="nome" id="nome" placeholder="Digite aqui seu Nome"/>
                 </br>
                 </br>
                 <label>Senha</label>
                 </br>
-                <input type="password" placeholder="Senha"/>
+                <input type="password" id="senha" name="senha" placeholder="Senha"/>
                 </br>
                 </br>
                 <label>Email</label>
                 </br>
-                <input type ="text" name="email" placeholder="Exemplo:123@gmail.com"/>
+                <input type ="text" name="email" id="email" placeholder="Exemplo:123@gmail.com"/>
                 </br>
                 </br>
                 <label>Data de Nascimento</label>
                 </br>
-                <form action="/action_page.php">
-                    <input type="datetime-local" name="bdaytime"/>
-                </form>
+                <input type="datetime-local" id="nascimento"name="nascimento"/>
+                </br>
                 </br>
                 <label>Sexo</label>
                 </br>
-                <input type="text" name="sexo" placeholder="Digite seu sexo"/>
+                <input type="radio" name="sexo" value="M"  id="sexo"/>M -
+                <input type="radio" name="sexo" value="F"  id="sexo2"/>F
                 </br>
                 </br>
-                <button class="botao"><a class = "botaopreto" href="">Confirmar</a></button>
+                    <button class = "botao botaopreto cor" >Confirmar</button>
                 </form>
             </div>
         </div>

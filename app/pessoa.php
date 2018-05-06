@@ -8,9 +8,9 @@ class pessoa extends Model
 {
     protected $table = 'pessoa';
 
-    protected $fillable = ['nome',  'email', 'nascimento', 'sexo'];
+    protected $fillable = ['nome','email','senha', 'nascimento', 'sexo'];
 
-    public function update($id,$nome='',$email='',$nascimento='',$sexo='')
+    /*public function update($id,$nome='',$email='',$senha='',$nascimento='',$sexo='')
     {
         $pessoa = new Pessoa();
         $pessoa->find($id);
@@ -18,8 +18,12 @@ class pessoa extends Model
         if(!$pessoa->nome == ''){
             $pessoa->nome = $nome;
         }
+
         if(!$pessoa->email == ''){
             $pessoa->email = $email;
+        }
+        if(!$pessoa->senha == ''){
+            $pessoa->senha = $senha;
         }
         if(!$pessoa->nascimento == ''){
             $pessoa->nascimento= $nascimento;
@@ -29,6 +33,6 @@ class pessoa extends Model
         }
 
         $pessoa->save();
-    }
+    }*/
 
 }

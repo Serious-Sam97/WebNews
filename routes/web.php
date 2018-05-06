@@ -20,3 +20,5 @@ Route::get('pessoaCadastroUpdate','pessoaController@update');
 Route::get('pessoaCadastroStore','pessoaController@store');
 //Route::get('noticia/{id}', 'NoticiaController@index');
 Route::get('noticia', 'NoticiaController@index');
+Route::get('teste','pessoaController@teste');
+Route::get('cadastrar','pessoaController@store');
