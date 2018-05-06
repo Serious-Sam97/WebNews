@@ -87,7 +87,7 @@
                 </br>
                 <label>Data de Nascimento</label>
                 </br>
-                <input type="datetime-local" id="nascimento"name="nascimento"/>
+                <input type="datetime-local" id="nascimento" name="nascimento"/>
                 </br>
                 </br>
                 <label>Sexo</label>
