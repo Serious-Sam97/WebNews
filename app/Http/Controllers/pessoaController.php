@@ -22,42 +22,8 @@ class pessoaController extends Controller
             $out->nascimento = $tudo['nascimento'];
             $out->sexo       = $tudo['sexo'];
         $out->save();
-    }
 
-    public function update(Request $request)
-    {
-        $all = $request->get();
-        $id = $all->id();
-        
-        $nome = $all->nome;
-        $senha = $all->senha;
-        $email = $all->email;
-        $nascimento = $all->nascimento;
-        $sexo = $all->sexo;
-
-
-        $pessoa = pessoa::find(1);
-
-
-            $pessoa->nome = 'merdaASDFSDAFSDAFASDFASDFASDF';
-
-
-            $pessoa->email = 'merda1@gmail.com';
-
-
-            $pessoa->nascimento= '17/08/97';
-
-            $pessoa->sexo = 'm';
-
-
-
-        $pessoa->save();
-
-    }
-
-    public function destroy($id)
-    {
-
+        return homeController::index();
     }
 
     public function teste(Request $request){

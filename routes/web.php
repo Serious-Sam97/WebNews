@@ -22,3 +22,4 @@ Route::get('pessoaCadastroStore','pessoaController@store');
 Route::get('noticia', 'NoticiaController@index');
 Route::get('teste','pessoaController@teste');
 Route::get('cadastrar','pessoaController@store');
+Route::get('home','homeController@index');
