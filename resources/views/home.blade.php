@@ -26,7 +26,7 @@
         <div class ="row">
             <div class = "col-md-12" align = "center">
                 <br>
-                <a href="index.html"><img src = "img/portal.png" class = "imglogo" ></a>
+                <a href="home"><img src = "img/portal.png" class = "imglogo" ></a>
             </div>
         </div>
     </div>
@@ -36,7 +36,7 @@
 
 
 <ul class = "fonte">
-    <li class="esquerda"><a class="active" href="#home" style="text-decoration:none">Home</a></li>
+    <li class="esquerda"><a class="active" href="home" style="text-decoration:none">Home</a></li>
     <li class="esquerda "><a href="#Tecnologia">Tecnologia</a></li>
     <li class="esquerda "><a href="#Animes">Animes/Mangás</a></li>
     <li class="esquerda "><a href="#Comics">HQ's/Comics</a></li>
@@ -45,7 +45,7 @@
     <li class="esquerda"><a href="#Jogos">Jogos</a></li>
     <li class="esquerda"><a href="#Livros">Livros</a></li>
     <li class="entrar"><img src = "img/loginuser.png" class ="imgicon">
-        <a class="entrar" href="login.html"> Entrar </a>
+        <a class="entrar" href="pessoaCadastro"> Entrar </a>
 
 </ul>
 
@@ -97,7 +97,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12-md" style="text-align: center;">
-                <a href="telaGenerica.html">
+                <a href="noticia">
                     <tr>
                         <div class="inline">
                             <img class="img01" src="img/lastguardian.png">

@@ -44,7 +44,7 @@
         <div class ="row">
             <div class = "col-md-12" align = "center">
                 <br>
-                <a href="index.html"><img src = "img/portal.png" class = "imglogo" ></a>
+                <a href="home"><img src = "img/portal.png" class = "imglogo" ></a>
             </div>
 
 </header>
@@ -53,7 +53,7 @@
 
 
 <ul>
-    <li class="esquerda"><a class="active" href="" style="text-decoration:none">Home</a></li>
+    <li class="esquerda"><a class="active" href="home" style="text-decoration:none">Home</a></li>
     <li class="esquerda"><a href="#Tecnologia">Tecnologia</a></li>
     <li class="esquerda"><a href="#Animes">Animes/Mangás</a></li>
     <li class="esquerda"><a href="#Comics">HQ's/Comics</a></li>
