@@ -16,8 +16,8 @@ class pessoaController extends Controller
     {
         $tudo = $request ->all();
         $out = new pessoa();
-        $out =['nome','email','nascimento','sexo'];
             $out->nome       = $tudo['nome'];
+            $out->senha      = $tudo['senha'];
             $out->email      = $tudo['email'];
             $out->nascimento = $tudo['nascimento'];
             $out->sexo       = $tudo['sexo'];
@@ -30,6 +30,7 @@ class pessoaController extends Controller
         $id = $all->id();
         
         $nome = $all->nome;
+        $senha = $all->senha;
         $email = $all->email;
         $nascimento = $all->nascimento;
         $sexo = $all->sexo;
@@ -57,6 +58,12 @@ class pessoaController extends Controller
     public function destroy($id)
     {
 
+    }
+
+    public function teste(Request $request){
+        $all = $request->all();
+        var_dump($all);
+        die();
     }
 }
 // SÓ RETORNA INT
