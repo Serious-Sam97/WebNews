@@ -10,4 +10,5 @@ class Noticia extends Model
 
     protected $fillable = ['header',  'body', 'footer','imagem'];
 
+
 }
