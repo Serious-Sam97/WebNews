@@ -18,8 +18,10 @@ Route::get('/', function () {
 Route::get('pessoaCadastro','pessoaController@index');
 Route::get('pessoaCadastroUpdate','pessoaController@update');
 Route::get('pessoaCadastroStore','pessoaController@store');
-//Route::get('noticia/{id}', 'NoticiaController@index');
-Route::get('noticia', 'NoticiaController@index');
 Route::get('teste','pessoaController@teste');
 Route::get('cadastrar','pessoaController@store');
 Route::get('home','homeController@index');
+
+//Noticia
+Route::post('noticia/{id}', 'NoticiaController@index')->name('article');
+//------------------------------------------------------------
