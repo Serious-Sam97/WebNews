@@ -16,9 +16,7 @@ class NoticiaTable extends Migration
         if(!Schema::hasTable('noticia')) {
             Schema::create('noticia', function (Blueprint $table) {
                 $table->increments('id');
-                $table->string('header');
-                $table->string('body');
-                $table->string('footer');
+                $table->string('text');
                 $table->string('imagem');
                 $table->timestamps();
             });
