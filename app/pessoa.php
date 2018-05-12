@@ -11,6 +11,6 @@ class pessoa extends Model
     protected $fillable = ['nome','email','senha', 'nascimento', 'sexo'];
 
     public static function retornaUsuarios(){
-        return self::select('id','email','senha')->get();
+        return self::select('id','nome','email','senha')->get();
     }
 }
