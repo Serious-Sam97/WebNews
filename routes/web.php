@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', 'homeController@index');
 //Cadastrar-Login
 Route::get('pessoaCadastro','pessoaController@index');
 Route::get('pessoaCadastroUpdate','pessoaController@update');
@@ -22,11 +20,6 @@ Route::get('teste','pessoaController@teste');
 Route::get('cadastrar','pessoaController@store');
 Route::get('login','pessoaController@login');
 Route::get('logout','pessoaController@logout');
-
-//Home's
-Route::get('home','homeController@index');
-Route::get('homeLogin','pessoaController@retornaHomeLogin');
-
 
 //Noticia
 Route::post('noticia', 'NoticiaController@index');

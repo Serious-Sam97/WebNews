@@ -30,6 +30,8 @@ class pessoaController extends Controller
     }
     public function login(Request $request){
         $all = $request->all();
+        var_dump($all);
+        die();
         $usuarios = pessoa::retornaUsuarios()->toArray();
 
         foreach ($usuarios as  $usu){
@@ -45,7 +47,8 @@ class pessoaController extends Controller
         $_SESSION['nome'] = $nome;
         $nomeLogin = $_SESSION['nome'];
 
-        return \View::make('homeLogin')->with('nome',$nomeLogin);
+        //return \View::make('home')->with('nome',$nomeLogin);
+        return homeController::index($nomeLogin);
     }
 
     public function logout(){
