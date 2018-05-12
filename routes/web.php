@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 Route::get('pessoaCadastro','pessoaController@index');
@@ -23,5 +23,5 @@ Route::get('cadastrar','pessoaController@store');
 Route::get('home','homeController@index');
 
 //Noticia
-Route::post('noticia/{id}', 'NoticiaController@index')->name('article');
+Route::post('noticia', 'NoticiaController@index');
 //------------------------------------------------------------
