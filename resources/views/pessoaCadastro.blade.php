@@ -2,7 +2,6 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="img/pokebola.ico" />
     <title >
 
@@ -19,32 +18,11 @@
                 $(".login2").hide();
                 $(".invisivel").show();
             });
-
-            $('.logar').on('click', function () {
-                $.ajax({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    url: "login",
-                    method: 'get',
-                    data: {
-                        email: $('.email').val(),
-                        senha: $('.senha').val()
-                    },
-                    success: function (data) {
-                        $data = $(data);
-                        window.location.href = "/";
-
-                    }
-                })
-            });
         });
     </script>
 </head>
 
 <body>
-
-<div id="abacaxi">
 
 <header >
     <br>
@@ -52,7 +30,7 @@
         <div class ="row">
             <div class = "col-md-12" align = "center">
                 <br>
-                <a href="home"><img src = "images/portal.png" class = "imglogo" ></a>
+                <a href="/"><img src = "images/portal.png" class = "imglogo" ></a>
             </div>
         </div>
     </div>
@@ -127,21 +105,24 @@
 <div class ="container">
     <div class ="row">
         <div class = "col-md-12 fonte login2" align = "center">
+            <form action = "login">
             <label>E-mail</label>
             </br>
-            <input type="E-mail" class="email"  placeholder="Digite aqui seu E-mail"/>
+            <input type="text" class="email" name="email"  placeholder="Digite aqui seu E-mail"/>
             </br>
             </br>
             <label>Senha</label>
             </br>
-            <input type="password" class="senha" placeholder="Senha"/>
+            <input type="password" name="senha" placeholder="Senha"/>
             </br>
             </br>
-            <button class="botao botaopreto logar">Confirmar</button>
+            <button class="botao botao preto cor" type="submit">Confirmar</button>
+            </form>
             </br>
             </br>
             <h5 style = "color: dodgerblue">Não tem Cadastro?</h5>
             </br>
+
             <button class="botao botaopreto cor" id="hide" ><a>Cadastre-se</a></button>
         </div>
     </div>
@@ -155,7 +136,6 @@
         geekshire LTDA. </br>
         The Shire - Para os geeks com sede de informação </br>
     </div>
-</div>
 </div>
 </body>
 
