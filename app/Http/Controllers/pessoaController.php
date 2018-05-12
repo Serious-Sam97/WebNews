@@ -11,6 +11,9 @@ class pessoaController extends Controller
     public function index() {
         return view('pessoaCadastro');
     }
+    public static function retornaHomeLogin(){
+        return view('homeLogin');
+    }
 
     public function store(Request $request)
     {
@@ -31,19 +34,22 @@ class pessoaController extends Controller
 
         foreach ($usuarios as  $usu){
             if($all['email'] == $usu['email'] && $all['senha'] == $usu['senha']){
-                return self::show($usu['id']);
+                return self::show($usu['id'],$usu['nome']);
             }
         }
     }
-    public function show($id)
+    public function show($id,$nome)
     {
-        $value = session()->get('key');
+        session_start();
+        $_SESSION['id'] = $id;
+        $_SESSION['nome'] = $nome;
+        $nomeLogin = $_SESSION['nome'];
 
+        return \View::make('homeLogin')->with('nome',$nomeLogin);
     }
 
-
-    public function logout(Request $request,$id){
-        $request->session()->flush();
+    public function logout(){
+      session()->flush();
 
         return homeController::index();
     }

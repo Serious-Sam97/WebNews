@@ -86,6 +86,9 @@ li.esquerda{
     float: left;
 }
 
+li.alinhar{
+    margin-top:13px;
+}
 li.entrar{
     display: block;
     color: white;

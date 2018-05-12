@@ -44,15 +44,9 @@
     <li class="esquerda "><a href="#Series">Séries</a></li>
     <li class="esquerda"><a href="#Jogos">Jogos</a></li>
     <li class="esquerda"><a href="#Livros">Livros</a></li>
+    <li class="entrar"><a href="logout"> Logout</a></li>
+    <li class="entrar alinhar ">{!! $nome !!}</li>
     <li class="entrar"><img src = "img/loginuser.png" class ="imgicon">
-
-
-
-
-
-
-    <a href="logout"> Logout</a>
-
 </ul>
 
 <div class="container">
