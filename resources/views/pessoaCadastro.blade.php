@@ -2,6 +2,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="img/pokebola.ico" />
     <title >
 
@@ -19,18 +20,23 @@
                 $(".invisivel").show();
             });
 
-            (".ajax").on("click",function(){
-                    $.ajax({
-
-                    type: "GET",
-                    url: "noticia",
-                    success: function (data) {
-                        console.log(data);
+            $('.logar').on('click', function () {
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     },
-                    error: function (data) {
-                        console.log('Error:', data);
+                    url: "login",
+                    method: 'get',
+                    data: {
+                        email: $('.email').val(),
+                        senha: $('.senha').val()
+                    },
+                    success: function (data) {
+                        $data = $(data);
+                        window.location.href = "/";
+
                     }
-                });
+                })
             });
         });
     </script>
@@ -38,14 +44,18 @@
 
 <body>
 
+<div id="abacaxi">
+
 <header >
     <br>
     <div class ="container">
         <div class ="row">
             <div class = "col-md-12" align = "center">
                 <br>
-                <a href="home"><img src = "img/portal.png" class = "imglogo" ></a>
+                <a href="home"><img src = "images/portal.png" class = "imglogo" ></a>
             </div>
+        </div>
+    </div>
 
 </header>
 </br>
@@ -53,7 +63,7 @@
 
 
 <ul>
-    <li class="esquerda"><a class="active" href="home" style="text-decoration:none">Home</a></li>
+    <li class="esquerda"><a class="active" href="/" style="text-decoration:none">Home</a></li>
     <li class="esquerda"><a href="#Tecnologia">Tecnologia</a></li>
     <li class="esquerda"><a href="#Animes">Animes/Mangás</a></li>
     <li class="esquerda"><a href="#Comics">HQ's/Comics</a></li>
@@ -61,6 +71,7 @@
     <li class="esquerda"><a href="#Series">Séries</a></li>
     <li class="esquerda"><a href="#Jogos">Jogos</a></li>
     <li class="esquerda"><a href="#Livros">Livros</a></li>
+
 </ul>
 <div class="container">
     <div class = "row">
@@ -123,10 +134,10 @@
             </br>
             <label>Senha</label>
             </br>
-            <input type="password" placeholder="Senha"/>
+            <input type="password" class="senha" placeholder="Senha"/>
             </br>
             </br>
-            <button class="botao"><a class="botaopreto" href="">Confirmar</a></button>
+            <button class="botao botaopreto logar">Confirmar</button>
             </br>
             </br>
             <h5 style = "color: dodgerblue">Não tem Cadastro?</h5>
@@ -144,6 +155,7 @@
         geekshire LTDA. </br>
         The Shire - Para os geeks com sede de informação </br>
     </div>
+</div>
 </div>
 </body>
 

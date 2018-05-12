@@ -93,8 +93,13 @@
     <li class="esquerda "><a href="#Series">Séries</a></li>
     <li class="esquerda"><a href="#Jogos">Jogos</a></li>
     <li class="esquerda"><a href="#Livros">Livros</a></li>
-    <li class="entrar"><img src = "img/loginuser.png" class ="imgicon">
-        <a class="entrar" href="pessoaCadastro"> Entrar </a>
+    <li class="entrar"><img src = "img/loginuser.png" class ="imgicon"></li>
+    @if($nome == 'Entrar')
+        <li class="entrar"><a href="pessoaCadastro"> {!! $nome !!}</a></li>
+    @else
+        <li class="entrar">{!! $nome !!}</li>
+        <li class="entrar"><a href="logout">Logout</a></li>
+    @endif
 
 </ul>
 
