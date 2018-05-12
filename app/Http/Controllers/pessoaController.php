@@ -48,7 +48,6 @@ class pessoaController extends Controller
         $_SESSION['nome'] = $nome;
         $nomeLogin = $_SESSION['nome'];
 
-        //return \View::make('home')->with('nome',$nomeLogin);
         return homeController::index($nomeLogin);
     }
 

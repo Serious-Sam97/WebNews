@@ -75,7 +75,7 @@
         <div class ="row">
             <div class = "col-md-12" align = "center">
                 <br>
-                <a href="home"><img src = "images/portal.png" class = "imglogo" ></a>
+                <a href="/"><img src = "images/portal.png" class = "imglogo" ></a>
             </div>
         </div>
     </div>
@@ -85,7 +85,7 @@
 
 
 <ul class = "fonte">
-    <li class="esquerda"><a class="active" href="home" style="text-decoration:none">Home</a></li>
+    <li class="esquerda"><a class="active" href="\" style="text-decoration:none">Home</a></li>
     <li class="esquerda "><a href="#Tecnologia">Tecnologia</a></li>
     <li class="esquerda "><a href="#Animes">Animes/Mangás</a></li>
     <li class="esquerda "><a href="#Comics">HQ's/Comics</a></li>
@@ -93,12 +93,11 @@
     <li class="esquerda "><a href="#Series">Séries</a></li>
     <li class="esquerda"><a href="#Jogos">Jogos</a></li>
     <li class="esquerda"><a href="#Livros">Livros</a></li>
-    <li class="entrar"><img src = "img/loginuser.png" class ="imgicon"></li>
     @if($nome == 'Entrar')
         <li class="entrar"><a href="pessoaCadastro"> {!! $nome !!}</a></li>
     @else
-        <li class="entrar">{!! $nome !!}</li>
         <li class="entrar"><a href="logout">Logout</a></li>
+        <li class="entrar alinhar">{!! $nome !!}</li>
     @endif
 
 </ul>
