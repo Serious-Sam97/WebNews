@@ -1,5 +1,3 @@
-
-<!DOCTYPE HTML>
 <html>
 <head>
     <link rel="shortcut icon" href="img/pokebola.ico" />
@@ -17,20 +15,6 @@
             $("#hide").click(function(){
                 $(".login2").hide();
                 $(".invisivel").show();
-            });
-
-            (".ajax").on("click",function(){
-                    $.ajax({
-
-                    type: "GET",
-                    url: "noticia",
-                    success: function (data) {
-                        console.log(data);
-                    },
-                    error: function (data) {
-                        console.log('Error:', data);
-                    }
-                });
             });
         });
     </script>
@@ -96,7 +80,7 @@
                 <input type="radio" name="sexo" value="F"  id="sexo2"/>F
                 </br>
                 </br>
-                    <button class = "botao botaopreto cor" >Confirmar</button>
+                    <button class = "botao botaopreto cor" value ="logar" >Confirmar</button>
                 </form>
             </div>
         </div>
@@ -116,17 +100,19 @@
 <div class ="container">
     <div class ="row">
         <div class = "col-md-12 fonte login2" align = "center">
+            <form action = "login">
             <label>E-mail</label>
             </br>
-            <input type="E-mail" class="email"  placeholder="Digite aqui seu E-mail"/>
+            <input type="E-mail"name="email" id="email"  placeholder="Digite aqui seu E-mail"/>
             </br>
             </br>
             <label>Senha</label>
             </br>
-            <input type="password" placeholder="Senha"/>
+            <input type="password" name="senha" id="senha"  placeholder="Senha"/>
             </br>
             </br>
-            <button class="botao"><a class="botaopreto" href="">Confirmar</a></button>
+            <button class="botao botao preto cor"><a>Confirmar</a></button>
+            </form>
             </br>
             </br>
             <h5 style = "color: dodgerblue">Não tem Cadastro?</h5>

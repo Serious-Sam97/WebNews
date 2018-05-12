@@ -25,6 +25,28 @@ class pessoaController extends Controller
 
         return homeController::index();
     }
+    public function login(Request $request){
+        $all = $request->all();
+        $usuarios = pessoa::retornaUsuarios()->toArray();
+
+        foreach ($usuarios as  $usu){
+            if($all['email'] == $usu['email'] && $all['senha'] == $usu['senha']){
+                return self::show($usu['id']);
+            }
+        }
+    }
+    public function show($id)
+    {
+        $value = session()->get('key');
+
+    }
+
+
+    public function logout(Request $request,$id){
+        $request->session()->flush();
+
+        return homeController::index();
+    }
 
     public function teste(Request $request){
         $all = $request->all();
