@@ -33,7 +33,7 @@
                     },
                     success: function (data) {
                         $data = $(data);
-                        window.location.href = "/";
+                        $('#abacaxi').fadeOut().html($data).fadeIn();
 
                     }
                 })

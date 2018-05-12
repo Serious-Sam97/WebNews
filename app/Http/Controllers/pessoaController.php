@@ -30,8 +30,9 @@ class pessoaController extends Controller
     }
     public function login(Request $request){
         $all = $request->all();
-        var_dump($all);
-        die();
+        
+        session(['nome' => ]);
+
         $usuarios = pessoa::retornaUsuarios()->toArray();
 
         foreach ($usuarios as  $usu){
