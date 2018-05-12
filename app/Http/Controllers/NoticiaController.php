@@ -8,8 +8,10 @@ use Illuminate\View\View;
 
 class NoticiaController extends Controller
 {
-    function index($idArticle){
-        $articles = Noticia::returnArticle($idArticle);
+    function index(Request $request){
+        $all = $request->all();
+
+        $articles = Noticia::returnArticle($all['id']);
         $articles = $articles->toArray();
 
         $text = $articles[0]['text'];

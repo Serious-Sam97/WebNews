@@ -2,6 +2,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="img/pokebola.ico" />
     <title >
         The Shire
@@ -16,9 +17,57 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+    <script>
+        $(document).ready(function () {
+
+            $('.lastGuardian').click(function () {
+                returnNoticia(1);
+            });
+
+            $('.nintendo').click(function () {
+                returnNoticia(3);
+            });
+
+            $('.onePiece').click(function () {
+                returnNoticia(2);
+            });
+
+            $('.disney').click(function () {
+                returnNoticia(4);
+            });
+
+            $('.harry').click(function () {
+                returnNoticia(5);
+            });
+
+            $('.bvs').click(function () {
+                returnNoticia(6);
+            });
+
+            function returnNoticia(id) {
+                    $.ajax({
+                        headers: {
+                            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                        },
+                        url: "noticia",
+                        method: 'post',
+                        data: {
+                            id: id
+                        },
+                        success: function (data) {
+                            $data = $(data);
+                            $('#container').fadeOut().html($data).fadeIn();
+
+                        }
+                    })
+            }
+        })
+    </script>
+
 </head>
 
 <body>
+<div id="container">
 
 <header >
     <br>
@@ -26,7 +75,7 @@
         <div class ="row">
             <div class = "col-md-12" align = "center">
                 <br>
-                <a href="home"><img src = "img/portal.png" class = "imglogo" ></a>
+                <a href="home"><img src = "images/portal.png" class = "imglogo" ></a>
             </div>
         </div>
     </div>
@@ -57,31 +106,30 @@
             <li data-target="#demo" data-slide-to="2"></li>
         </ul>
         <div class="carousel-inner">
-            <div class="carousel-item active">
-                <a href="telaGenerica.html">
-                    <img src="img/lastguardian.png" alt="lastguardian">
+            <div class="carousel-item active lastGuardian">
+                    <img src="images/lastguardian.png" alt="lastguardian">
                     <div class="overlay"></div>
                     <div class="carousel-caption">
                         <h3 class=" fonteslide">Jogos!!</h3>
-                        <p class="fonteslide">Sony anuncia The Last Guardian 2!!</p>
+                        <p class="fonteslide lastGuardian">Sony anuncia The Last Guardian 2!!</p>
                     </div>
-                </a>
-
             </div>
-            <div class="carousel-item">
-                <img src="img/nintendointernet.png" alt="nintendo" >
+
+            <div class="carousel-item nintendo">
+                <img src="images/nintendointernet.png" alt="nintendo" >
                 <div class="overlay"></div>
                 <div class="carousel-caption">
                     <h3 class = "fonteslide">Tecnologia!!</h3>
-                    <p class = "fonteslide">Nintendo anuncia proximo console!!</p>
+                    <p class = "fonteslide nintendo">Nintendo anuncia proximo console!!</p>
                 </div>
             </div>
-            <div class="carousel-item">
-                <img src="img/onepiece.png" alt="onepiece" >
+
+            <div class="carousel-item onePiece">
+                <img src="images/onepiece.png" alt="onepiece" >
                 <div class="overlay"></div>
                 <div class="carousel-caption">
                     <h3 class = "fonteslide">Animes!!</h3>
-                    <p class = "fonteslide">Oda solta o verbo: One Piece deve chegar até o milésimo capítulo! Veja os spoilers quentinhos </p>
+                    <p class = "fonteslide onePiece">Oda solta o verbo: One Piece deve chegar até o milésimo capítulo! Veja os spoilers quentinhos </p>
                 </div>
             </div>
         </div>
@@ -97,57 +145,54 @@
     <div class="container">
         <div class="row">
             <div class="col-12-md" style="text-align: center;">
-                <a href="noticia">
                     <tr>
                         <div class="inline">
-                            <img class="img01" src="img/lastguardian.png">
+                            <img class="img01 lastGuardian" src="images/lastguardian.png" onclick=(1)>
                             </br>
-                            <h5 class="txt">Sony anuncia The Last Guardian 2: Electric Boogaloo para 2025 (data não confirmada, e nem plataforma)</h5>
+                            <h5 class="txt lastGuardian">Sony anuncia The Last Guardian 2: Electric Boogaloo para 2025 (data não confirmada, e nem plataforma)</h5>
                             <br>
                         </div>
                     </tr>
-                </a>
 
                 <div class="inline">
-                    <img class="img01" src="img/nintendointernet.png">
+                    <img class="img01 nintendo" src="images/nintendointernet.png">
                     </br>
-                    <h5 class="txt"> Nintendo anuncia que seu próximo console terá um revolucionário acesso à internet! Groundbreaking!
+                    <h5 class="txt nintendo"> Nintendo anuncia que seu próximo console terá um revolucionário acesso à internet! Groundbreaking!
                     </h5>
                     <br>
                 </div>
 
                 <div class="inline">
-                    <img class="img01" src="img/onepiece.png">
+                    <img class="img01 onePiece" src="images/onepiece.png">
                     </br>
-                    <h5 class="txt"> Oda solta o verbo: One Piece deve chegar até o milésimo capítulo! Veja os spoilers quentinhos
+                    <h5 class="txt onePiece"> Oda solta o verbo: One Piece deve chegar até o milésimo capítulo! Veja os spoilers quentinhos
                     </h5>
                     <br>
                 </div>
 
                 <div class="inline">
-                    <img class="img01" src="img/jarjar.png">
+                    <img class="img01 disney" src="images/jarjar.png">
                     </br>
-                    <h5 class="txt"> Disney quebra a internet e anuncia spin off exclusivo contando o passado obscuro de Jar Jar Binks
+                    <h5 class="txt disney"> Disney quebra a internet e anuncia spin off exclusivo contando o passado obscuro de Jar Jar Binks
                     </h5>
                     <br>
                 </div>
 
                 <div class="inline">
-                    <img class="img01" src="img/jkrolling.png">
+                    <img class="img01 harry" src="images/jkrolling.png">
                     </br>
-                    <h5 class="txt"> Fim de Harry Potter...JK! Rolling anuncia novo livro focado na família de Bicuço antes de conhecer Hagrid
+                    <h5 class="txt harry"> Fim de Harry Potter...JK! Rolling anuncia novo livro focado na família de Bicuço antes de conhecer Hagrid
                     </h5>
                     <br>
                 </div>
 
                 <div class="inline">
-                    <img class="img01" src="img/bvs.png">
+                    <img class="img01 bvs" src="images/bvs.png">
                     </br>
-                    <h5 class="txt"> No more grayscale: DC anuncia que seus filmes daqui pra frente serão mais coloridos que o arco-íris
+                    <h5 class="txt bvs"> No more grayscale: DC anuncia que seus filmes daqui pra frente serão mais coloridos que o arco-íris
                     </h5>
                     <br>
                 </div>
-
             </div>
         </div>
     </div>
@@ -164,6 +209,7 @@
 
 <script src = "js/bootstrap.min.js"/>
 <link rel="stylesheet" href="css/bootstrap.min.css">
+</div>
 </body>
 
 </html>

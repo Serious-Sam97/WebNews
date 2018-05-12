@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 //Cadastrar-Login
 Route::get('pessoaCadastro','pessoaController@index');
@@ -27,6 +27,7 @@ Route::get('logout','pessoaController@logout');
 Route::get('home','homeController@index');
 Route::get('homeLogin','pessoaController@retornaHomeLogin');
 
+
 //Noticia
-Route::post('noticia/{id}', 'NoticiaController@index')->name('article');
+Route::post('noticia', 'NoticiaController@index');
 //------------------------------------------------------------
