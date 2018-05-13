@@ -11,9 +11,6 @@ class pessoaController extends Controller
     public function index() {
         return view('pessoaCadastro');
     }
-    public static function retornaHomeLogin(){
-        return view('homeLogin');
-    }
 
     public function store(Request $request)
     {
