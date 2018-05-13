@@ -11,9 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'homeController@index');
+//Cadastrar-Login
+Route::get('pessoaCadastro','pessoaController@index');
+Route::get('pessoaCadastroUpdate','pessoaController@update');
+Route::get('pessoaCadastroStore','pessoaController@store');
+Route::get('teste','pessoaController@teste');
+Route::get('cadastrar','pessoaController@store');
+Route::get('login','pessoaController@login');
+Route::get('logout','pessoaController@logout');
 
-//Route::get('noticia/{id}', 'NoticiaController@index');
-Route::get('noticia', 'NoticiaController@index');
+//Noticia
+Route::post('noticia', 'NoticiaController@index');
+//------------------------------------------------------------

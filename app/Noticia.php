@@ -10,4 +10,9 @@ class Noticia extends Model
 
     protected $fillable = ['header',  'body', 'footer','imagem'];
 
+    public static function returnArticle($id){
+        return self::select('noticia.text', 'noticia.imagem')
+            ->where('noticia.id', $id)
+            ->get();
+    }
 }

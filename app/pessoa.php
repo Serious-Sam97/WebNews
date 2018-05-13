@@ -8,5 +8,9 @@ class pessoa extends Model
 {
     protected $table = 'pessoa';
 
-    protected $fillable = ['nome',  'email', 'nascimento'];
+    protected $fillable = ['nome','email','senha', 'nascimento', 'sexo'];
+
+    public static function retornaUsuarios(){
+        return self::select('id','nome','email','senha')->get();
+    }
 }

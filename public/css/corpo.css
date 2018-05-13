@@ -1,4 +1,11 @@
+.invisivel{
+    display:none;
+}
 
+
+.cor:hover{
+    color:blue;
+}
 .botaopreto{
 	color: white; 
 	text-decoration:none;
@@ -13,7 +20,14 @@
     border-radius: 15px;
     background-color: #6BB5F7;
 }
-
+.botaohome{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: 2px solid #0E67B6;
+}
 h6{
 	text-align: center;	
 }
@@ -79,6 +93,9 @@ li.esquerda{
     float: left;
 }
 
+li.alinhar{
+    margin-top:13px;
+}
 li.entrar{
     display: block;
     color: white;

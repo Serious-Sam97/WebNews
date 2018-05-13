@@ -13,7 +13,7 @@ class RelacaoTable extends Migration
      */
     public function up()
     {
-        Schema::create('relacao', function (Blueprint $table) {
+        /*Schema::create('relacao', function (Blueprint $table) {
             $table->increments('id');
             $table->string('noticia');
             $table->string('categoria');
@@ -21,6 +21,8 @@ class RelacaoTable extends Migration
             $table->foreign('categoria')->references('categoria')->on('id');
             $table->timestamps();
         });
+        */
+        //PUTA QUE PARIU
     }
 
     /**
