@@ -13,6 +13,7 @@ class NoticiaTable extends Migration
      */
     public function up()
     {
+
         if(!Schema::hasTable('noticia')) {
             Schema::create('noticia', function (Blueprint $table) {
                 $table->increments('id');
@@ -22,6 +23,7 @@ class NoticiaTable extends Migration
                 $table->timestamps();
             });
         }
+
     }
 
     /**

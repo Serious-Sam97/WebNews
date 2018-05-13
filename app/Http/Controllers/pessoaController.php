@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use App\pessoa;
 
@@ -10,9 +11,6 @@ class pessoaController extends Controller
 
     public function index() {
         return view('pessoaCadastro');
-    }
-    public static function retornaHomeLogin(){
-        return view('homeLogin');
     }
 
     public function store(Request $request)
@@ -35,13 +33,19 @@ class pessoaController extends Controller
 
         foreach ($usuarios as  $usu){
             if($all['email'] == $usu['email'] && $all['senha'] == $usu['senha']){
-                session(['id' => $usu['id']]);
-                session(['nome' => $usu['nome']]);
-                return self::show($usu['id'],$usu['nome']);
+                    session(['id' => $usu['id']]);
+                    session(['nome' => $usu['nome']]);
+                    return self::show($usu['id'], $usu['nome']);
             }
         }
+        echo('<script type="text/javascript">
+            alert("Po cara você errou o email ou a senha!");
+            </script>');
+
+        return self::index();
+
     }
-    public function show($id,$nome)
+    public function show(Request $request,$id)
     {
         session_start();
         $_SESSION['id'] = $id;
