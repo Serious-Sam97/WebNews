@@ -34,18 +34,33 @@ class pessoaController extends Controller
 
         foreach ($usuarios as  $usu){
             if($all['email'] == $usu['email'] && $all['senha'] == $usu['senha']){
-                return self::show($usu['id'],$usu['nome']);
+
+                $request->session()->put($usu['id'], $usu['nome']);
+
+                
+                return homeController::show($request,$usu['id']);
             }
         }
     }
-    public function show($id,$nome)
+    public function show(Request $request,$id)
     {
-        session_start();
-        $_SESSION['id'] = $id;
-        $_SESSION['nome'] = $nome;
-        $nomeLogin = $_SESSION['nome'];
+        
+        // $usuarios = pessoa::retornaUsuarios()->toArray();
+        // $all = $request->all();
 
-        return homeController::index($nomeLogin);
+        // if ($request->session()->has($id)) {
+        //     foreach ($usuarios as  $usu){
+        //         if($id == $usu['id']){
+        //             $nome = $usu['nome'];
+
+        //             return homeController::index($nome);
+        //         }
+        //     }
+
+        //     return homeController::index();
+        // }
+
+       
     }
 
     public function logout(){
