@@ -61,12 +61,7 @@
                         }
                     })
             }
-    });
-
-
-
-
-
+        })
     </script>
 
 </head>
@@ -79,8 +74,9 @@
     <div class ="container">
         <div class ="row">
             <div class = "col-md-12" align = "center">
-                <br>
-                <a href="/"><img src = "images/portal.png" class = "imglogo" ></a>
+                <form action="/">
+                <br><img src = "images/portal.png" class = "imglogo" >
+                </form>
             </div>
         </div>
     </div>
@@ -90,7 +86,9 @@
 
 
 <ul class = "fonte">
-    <li class="esquerda"><a class="active" href="/" style="text-decoration:none">Home</a></li>
+    <form action="/">
+        <li class="esquerda"><button class="active botaohome cor" type="submit">Home</button></li>
+    </form>
     <li class="esquerda "><a href="#Tecnologia">Tecnologia</a></li>
     <li class="esquerda "><a href="#Animes">Animes/Mangás</a></li>
     <li class="esquerda "><a href="#Comics">HQ's/Comics</a></li>

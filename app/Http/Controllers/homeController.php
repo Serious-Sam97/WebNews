@@ -10,8 +10,16 @@ class homeController extends Controller
 
         //Ainda a terminar, fazer busca no banco de cada noticia!!
 
+        $value = session('nome');
+
+        if(!$value)
+            return \View::make('home')
+                ->with('nome', $nome);
+
         return \View::make('home')
-            ->with('nome', $nome);
+            ->with('nome', $value);
+
+
 
     }
 
