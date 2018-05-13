@@ -34,10 +34,10 @@
                     success: function (data) {
                         $data = $(data);
                         $('#abacaxi').fadeOut().html($data).fadeIn();
-
                     }
                 })
             });
+
         });
     </script>
 </head>
@@ -136,7 +136,7 @@
             <input type="password" name="senha" placeholder="Senha"/>
             </br>
             </br>
-            <button class="botao botao preto cor" type="submit">Confirmar</button>
+            <button class="botao botaopreto cor" type="submit">Confirmar</button>
             </form>
             </br>
             </br>
