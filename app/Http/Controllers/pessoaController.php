@@ -15,7 +15,19 @@ class pessoaController extends Controller
 
     public function store(Request $request)
     {
+        $cadastroA = pessoa::retornaUsuarios()->toArray();
+
         $tudo = $request ->all();
+        foreach ($cadastroA as $cad){
+            if($tudo['nome'] || $tudo['email'] || $tudo['senha'] || $tudo['nascimento'] || $tudo['sexo'] == null){
+                echo('<script type="text/javascript">
+            alert("Você não preencheu algum campo!");
+            </script>');
+
+                return self::index();
+            }
+        }
+        
         $out = new pessoa();
             $out->nome       = $tudo['nome'];
             $out->senha      = $tudo['senha'];
