@@ -31,7 +31,9 @@
 </br>
 
 <ul>
-    <li class="esquerda"><a class="active" href="home" style="text-decoration:none">Home</a></li>
+    <form action="/">
+        <li class="esquerda"><button class="active botaohome corAl" type="submit">Home</button></li>
+    </form>
     <li class="esquerda"><a href="#Tecnologia">Tecnologia</a></li>
     <li class="esquerda"><a href="#Animes">Animes/Mangás</a></li>
     <li class="esquerda"><a href="#Comics">HQ's/Comics</a></li>

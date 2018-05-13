@@ -20,6 +20,7 @@ class NoticiaTable extends Migration
                 $table->text('title');
                 $table->longText('text');
                 $table->string('imagem');
+                $table->integer('cat');
                 $table->timestamps();
             });
         }

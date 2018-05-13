@@ -17,9 +17,8 @@ class Noticia extends Model
     }
 
     public static function returnByCategory($category){
-        return self::select('noticia.text', 'noticia.imagem','categoria.nome')
-            ->join('categoria', 'categoria.id', '=', 'noticia.cat')
-            ->where('noticia.', 7)
+        return self::select('noticia.text', 'noticia.imagem')
+            ->where('noticia.cat', $category)
             ->get();
     }
 
