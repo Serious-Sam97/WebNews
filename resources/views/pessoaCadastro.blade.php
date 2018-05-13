@@ -34,10 +34,10 @@
                     success: function (data) {
                         $data = $(data);
                         $('#abacaxi').fadeOut().html($data).fadeIn();
-
                     }
                 })
             });
+
         });
     </script>
 </head>
