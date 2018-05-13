@@ -19,13 +19,22 @@ class pessoaController extends Controller
         return \View::make('pessoaCadastro')
             ->with('nome', $value);
     }
-    public static function retornaHomeLogin(){
-        return view('homeLogin');
-    }
 
     public function store(Request $request)
     {
+        $cadastroA = pessoa::retornaUsuarios()->toArray();
+
         $tudo = $request ->all();
+        foreach ($cadastroA as $cad){
+            if($tudo['nome'] || $tudo['email'] || $tudo['senha'] || $tudo['nascimento'] || $tudo['sexo'] == null){
+                echo('<script type="text/javascript">
+            alert("Você não preencheu algum campo!");
+            </script>');
+
+                return self::index();
+            }
+        }
+        
         $out = new pessoa();
             $out->nome       = $tudo['nome'];
             $out->senha      = $tudo['senha'];
@@ -50,6 +59,12 @@ class pessoaController extends Controller
                 return self::show($usu['id'],$usu['nome']);
             }
         }
+        echo('<script type="text/javascript"> 
+        alert("Po cara você errou o email ou a senha!");
+        </script>');
+
+        return self::index();
+
     }
     public function show($nome)
     {
