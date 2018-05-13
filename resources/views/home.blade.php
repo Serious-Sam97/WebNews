@@ -61,7 +61,12 @@
                         }
                     })
             }
-        })
+    });
+
+
+
+
+
     </script>
 
 </head>
@@ -85,7 +90,7 @@
 
 
 <ul class = "fonte">
-    <li class="esquerda"><a class="active" href="\" style="text-decoration:none">Home</a></li>
+    <li class="esquerda"><a class="active" href="/" style="text-decoration:none">Home</a></li>
     <li class="esquerda "><a href="#Tecnologia">Tecnologia</a></li>
     <li class="esquerda "><a href="#Animes">Animes/Mangás</a></li>
     <li class="esquerda "><a href="#Comics">HQ's/Comics</a></li>

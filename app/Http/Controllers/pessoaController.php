@@ -43,9 +43,11 @@ class pessoaController extends Controller
         session_start();
         $_SESSION['id'] = $id;
         $_SESSION['nome'] = $nome;
+
         $nomeLogin = $_SESSION['nome'];
 
         return homeController::index($nomeLogin);
+
     }
 
     public function logout(){
