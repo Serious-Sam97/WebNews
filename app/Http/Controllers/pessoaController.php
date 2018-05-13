@@ -45,7 +45,7 @@ class pessoaController extends Controller
         return self::index();
 
     }
-    public function show($id,$nome)
+    public function show(Request $request,$id)
     {
         session_start();
         $_SESSION['id'] = $id;

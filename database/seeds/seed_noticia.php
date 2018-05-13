@@ -38,6 +38,7 @@ class seed_noticia extends Seeder
 
                 Fumito Ueda é o criador de outras obras aclamadas na indústria de games, como os clássicos Ico (PS2, 2001) e Shadow of the Colossus (PS2, 2005). Ambos são imediatamente reconhecidos pelos críticos e lembrados pelos fãs pelo esmero do criador nos campos de level design, direção de arte e narrativa.</br>",
             'imagem' => "images/lastguardian.png",
+            'cat'=> 7,
         ]);
 
         DB::table('noticia')->insert([
@@ -62,6 +63,7 @@ Luffy ainda completa dizendo a Jinbe que ele não está autorizado a morrer, poi
 </br>
 Será que finalmente veremos Jinbe juntando-se aos chapéu de palha? Tudo vai depender dos próximos capítulos de One Piece. O capítulo 902 chega na semana que vem, se tudo der certo.",
             'imagem' => "images/onepiece.png",
+            'cat'=> 2,
         ]);
 
         DB::table('noticia')->insert([
@@ -75,6 +77,7 @@ Será que finalmente veremos Jinbe juntando-se aos chapéu de palha? Tudo vai de
 <p>Ele ainda comenta que o serviço do Switch será focado mais em oferecer produtos, e não tanto em funcionalidades. O executivo Shinya Takanashi ainda complementa dizendo que eles tem boas ideias de como fazer o serviço online premium do Nintendo Switch se tornar atrativo, e que valerá a pena conferir o anúncio dos recursos que o serviço vai oferecer.</p>
 <p>E aí donos de Switch, animados com o anúncio?</p>",
             'imagem' => "images/nintendointernet.png",
+            'cat'=> 7,
         ]);
 
         DB::table('noticia')->insert([
@@ -108,6 +111,7 @@ Será que finalmente veremos Jinbe juntando-se aos chapéu de palha? Tudo vai de
 
 ",
             'imagem' => "images/jarjar.png",
+            'cat'=> 5,
         ]);
 
         DB::table('noticia')->insert([
@@ -123,6 +127,7 @@ Para os fãs, as comparações entre Naruto e Harry Potter são bem diretas. Nar
 
 ",
             'imagem' => "images/jkrolling.png",
+            'cat'=> 8,
         ]);
 
         DB::table('noticia')->insert([
@@ -138,6 +143,7 @@ Para os fãs, as comparações entre Naruto e Harry Potter são bem diretas. Nar
 <p>“Definitivamente ele não é chamado assim”.</p>
 <p>Vingadores: Guerra Infinita já está em cartaz e você pode conferir o nosso review <a href=\"https://criticalhits.com.br/vingadores-guerra-infinita-review/\">aqui</a>.</p>",
             'imagem' => "images/bvs.png",
+            'cat'=> 4,
         ]);
     }
 }
