@@ -2,6 +2,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="shortcut icon" href="img/pokebola.ico" />
     <title >
 
@@ -17,6 +18,25 @@
             $("#hide").click(function(){
                 $(".login2").hide();
                 $(".invisivel").show();
+            });
+
+            $('.logar').on('click', function () {
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    url: "login",
+                    method: 'get',
+                    data: {
+                        email: $('.email').val(),
+                        senha: $('.senha').val()
+                    },
+                    success: function (data) {
+                        $data = $(data);
+                        $('#abacaxi').fadeOut().html($data).fadeIn();
+
+                    }
+                })
             });
         });
     </script>
@@ -136,6 +156,7 @@
         geekshire LTDA. </br>
         The Shire - Para os geeks com sede de informação </br>
     </div>
+</div>
 </div>
 </body>
 
