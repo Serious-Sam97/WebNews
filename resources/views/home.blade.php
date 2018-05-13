@@ -23,7 +23,7 @@
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                 },
                 url: "noticia",
-                method: 'post',
+                method: 'get',
                 data: {
                     id: id
                 },
