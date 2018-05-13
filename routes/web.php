@@ -26,5 +26,5 @@ Route::get('login','pessoaController@login');
 Route::get('logout','pessoaController@logout');
 
 //Noticia
-Route::post('noticia', 'NoticiaController@index');
+Route::get('noticia', 'NoticiaController@index');
 //------------------------------------------------------------
