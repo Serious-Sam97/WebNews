@@ -35,23 +35,14 @@ class pessoaController extends Controller
 
         foreach ($usuarios as  $usu){
             if($all['email'] == $usu['email'] && $all['senha'] == $usu['senha']){
-<<<<<<< HEAD
-
-                $request->session()->put($usu['id'], $usu['nome']);
-
-                
-                return homeController::show($request,$usu['id']);
-=======
                 session(['id' => $usu['id']]);
                 session(['nome' => $usu['nome']]);
                 return self::show($usu['id'],$usu['nome']);
->>>>>>> e228b48f183cc74a279dc8b276e49c9ac6687c40
             }
         }
     }
     public function show(Request $request,$id)
     {
-<<<<<<< HEAD
         
         // $usuarios = pessoa::retornaUsuarios()->toArray();
         // $all = $request->all();
@@ -69,16 +60,6 @@ class pessoaController extends Controller
         // }
 
        
-=======
-        session_start();
-        $_SESSION['id'] = $id;
-        $_SESSION['nome'] = $nome;
-
-        $nomeLogin = $_SESSION['nome'];
-
-        return homeController::index($nomeLogin);
-
->>>>>>> e228b48f183cc74a279dc8b276e49c9ac6687c40
     }
 
     public function logout(){
