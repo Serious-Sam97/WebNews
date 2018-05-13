@@ -8,7 +8,7 @@ class Noticia extends Model
 {
     protected $table = 'noticia';
 
-    protected $fillable = ['text','imagem','cat'];
+    protected $fillable = ['header',  'body', 'footer','imagem'];
 
     public static function returnArticle($id){
         return self::select('noticia.text', 'noticia.imagem')
@@ -16,48 +16,15 @@ class Noticia extends Model
             ->get();
     }
 
-
-    public static function returnTecnologia(){
-        return self::select('noticia.text', 'noticia.imagem','categoria.nome')
-            ->join('categoria', 'categoria.id', '=', 'noticia.cat')
-            ->where('noticia.cat', 1)
-            ->get();
-    }
-    public static function returnAnime(){
-        return self::select('noticia.text', 'noticia.imagem','categoria.nome')
-            ->join('categoria', 'categoria.id', '=', 'noticia.cat')
-            ->where('noticia.cat', 2)
-            ->get();
-    }
-    public static function returnManga(){
-        return self::select('noticia.text', 'noticia.imagem','categoria.nome')
-            ->join('categoria', 'categoria.id', '=', 'noticia.cat')
-            ->where('noticia.cat', 3)
-            ->get();
-    }
-    public static function returnFilmes(){
-        return self::select('noticia.text', 'noticia.imagem','categoria.nome')
-            ->join('categoria', 'categoria.id', '=', 'noticia.cat')
-            ->where('noticia.cat', 4)
-            ->get();
-    }
-    public static function returnSeries(){
-        return self::select('noticia.text', 'noticia.imagem','categoria.nome')
-            ->join('categoria', 'categoria.id', '=', 'noticia.cat')
-            ->where('noticia.cat', 5)
-            ->get();
-    }
-    public static function returnJogos(){
-        return self::select('noticia.text', 'noticia.imagem','categoria.nome')
-            ->join('categoria', 'categoria.id', '=', 'noticia.cat')
-            ->where('noticia.cat', 6)
-            ->get();
-    }
-    public static function returnLivros(){
-        return self::select('noticia.text', 'noticia.imagem','categoria.nome')
-            ->join('categoria', 'categoria.id', '=', 'noticia.cat')
-            ->where('noticia.cat', 7)
+    public static function returnByCategory($category){
+        return self::select('noticia.title','noticia.text', 'noticia.imagem', 'noticia.id')
+            ->where('noticia.cat', $category)
             ->get();
     }
 
+
+    public static function returnNoticias(){
+        return self::select('noticia.title','noticia.text', 'noticia.imagem', 'noticia.id')
+            ->get();
+    }
 }

@@ -2,50 +2,44 @@
 
 namespace App\Http\Controllers;
 
+use App\Noticia;
 use Illuminate\Http\Request;
 
 class homeController extends Controller
 {
-    public static function index(Request $request, $nome = 'entrar'){
+    public static function index($nome = 'Entrar'){
 
-        //Ainda a terminar, fazer busca no banco de cada noticia!!
-
-        return \View::make('home')
-            ->with('nome', $nome);
-
-    }
-    public static function show(Request $request,$id=-1){
-
-        //procura a session e pega o nome da pessoa 
-        $usuarios = pessoa::retornaUsuarios()->toArray();
-        $all = $request->all();
-
-        if ($request->session()->has($id)) {
-            foreach ($usuarios as  $usu){
-                if($id == $usu['id']){
-                    $nome = $usu['nome'];
-
-                    
-                }
-            }
-
-        }else {
-            $nome = 'entrar';
-        }
-
-        //Ainda a terminar, fazer busca no banco de cada noticia!!
+        $noticias = Noticia::returnNoticias();
 
         $value = session('nome');
 
         if(!$value)
             return \View::make('home')
-                ->with('nome', $nome);
+                ->with('nome', $nome)
+                ->with('noticias', $noticias);
 
         return \View::make('home')
-            ->with('nome', $value);
+            ->with('nome', $value)
+            ->with('noticias', $noticias)
+            ->with('carro', 'sim');
+    }
 
+    function category(Request $request, $nome = 'Entrar'){
+        $all = $request->all();
 
+        $noticias = Noticia::returnByCategory($all['id']);
 
+        $value = session('nome');
+
+        if(!$value)
+            return \View::make('home')
+                ->with('nome', $nome)
+                ->with('noticias', $noticias);
+
+        return \View::make('home')
+            ->with('nome', $value)
+            ->with('noticias', $noticias)
+            ->with('carro', 'nao');
     }
 
 }

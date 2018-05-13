@@ -12,6 +12,10 @@
 */
 
 Route::get('/', 'homeController@index');
+
+//Category
+Route::get('category', 'homeController@category');
+
 //Cadastrar-Login
 Route::get('pessoaCadastro','pessoaController@index');
 Route::get('pessoaCadastroUpdate','pessoaController@update');
