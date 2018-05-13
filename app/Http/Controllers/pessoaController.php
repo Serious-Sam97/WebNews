@@ -8,8 +8,16 @@ use App\pessoa;
 class pessoaController extends Controller
 {
 
-    public function index() {
-        return view('pessoaCadastro');
+    public function index($nome = 'Entrar') {
+
+        $value = session('nome');
+
+        if(!$value)
+            return \View::make('pessoaCadastro')
+                ->with('nome', $nome);
+
+        return \View::make('pessoaCadastro')
+            ->with('nome', $value);
     }
     public static function retornaHomeLogin(){
         return view('homeLogin');
@@ -48,7 +56,6 @@ class pessoaController extends Controller
         session_start();
         $_SESSION['nome'] = $nome;
         $nomeLogin = $_SESSION['nome'];
-
         return homeController::index($nomeLogin);
     }
 
