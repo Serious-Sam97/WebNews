@@ -59,6 +59,12 @@ class pessoaController extends Controller
                 return self::show($usu['id'],$usu['nome']);
             }
         }
+        echo('<script type="text/javascript"> 
+        alert("Po cara você errou o email ou a senha!");
+        </script>');
+
+        return self::index();
+
     }
     public function show($nome)
     {

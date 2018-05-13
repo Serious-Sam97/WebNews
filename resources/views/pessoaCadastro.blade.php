@@ -71,13 +71,6 @@
     <li class="esquerda"><button onclick="returnCategory(5)" class="botaoAdicionais corAl" type="submit">Séries</button></li>
     <li class="esquerda"><button onclick="returnCategory(6)" class="botaoAdicionais corAl" type="submit">Jogos</button></li>
     <li class="esquerda"><button onclick="returnCategory(7)" class="botaoAdicionais corAl" type="submit">Livros</button></li>
-    @if($nome == 'Entrar')
-        <li class="entrar"><a href="pessoaCadastro"> {!! $nome !!}</a></li>
-    @else
-        <li class="entrar"><a href="logout">Logout</a></li>
-        <li class="entrar alinhar">{!! $nome !!}</li>
-    @endif
-
 </ul>
 <div class="container">
     <div class = "row">
