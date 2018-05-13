@@ -15,4 +15,9 @@ class Noticia extends Model
             ->where('noticia.id', $id)
             ->get();
     }
+
+    public static function returnNoticias(){
+        return self::select('noticia.title','noticia.text', 'noticia.imagem', 'noticia.id')
+            ->get();
+    }
 }

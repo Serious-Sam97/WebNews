@@ -12,6 +12,7 @@ class seed_noticia extends Seeder
     public function run()
     {
         DB::table('noticia')->insert([
+            'title' => 'Sony anuncia The Last Guardian 2: Electric Boogaloo para 2025 (data não confirmada, e nem plataforma)',
             'text' => " </br></br>
                 <h1>The Last Guardian: criador já trabalha em novo projeto</h1>
                 </br>
@@ -41,6 +42,7 @@ class seed_noticia extends Seeder
         ]);
 
         DB::table('noticia')->insert([
+            'title' => 'Oda solta o verbo: One Piece deve chegar até o milésimo capítulo! Veja os spoilers quentinhos',
             'text' => "<h1>Oda solta o verbo: One Piece deve chegar até o milésimo capítulo! Veja os spoilers quentinhos</h1>
                 </br>
 One Piece é um dos mangás mais longevos da história do Japão, e quando falamos que algo não muda há anos por lá, é porque isso literalmente acontece.
@@ -65,6 +67,7 @@ Será que finalmente veremos Jinbe juntando-se aos chapéu de palha? Tudo vai de
         ]);
 
         DB::table('noticia')->insert([
+            'title' => 'Nintendo anuncia que seu próximo console terá um revolucionário acesso à internet! Groundbreaking!',
             'text' => "<h1>Nintendo anuncia que seu próximo console terá um revolucionário acesso à internet! Groundbreaking!</h1>
                 </br>
 <p>Em setembro deste ano a Nintendo lançará o serviço online pago para concorrer com a PlayStation Plus e a Xbox Live Gold. Até agora sabemos pouco sobre o serviço, e a única informação confirmada é o valor.</p>
@@ -78,6 +81,7 @@ Será que finalmente veremos Jinbe juntando-se aos chapéu de palha? Tudo vai de
         ]);
 
         DB::table('noticia')->insert([
+            'title' => 'Disney quebra a internet e anuncia spin off exclusivo contando o passado obscuro de Jar Jar Binks',
             'text' => "<h1>Disney quebra a internet e anuncia spin off exclusivo contando o passado obscuro de Jar Jar Binks</h1>
                 </br>
 <p>Vingadores: Guerra Infinita está entre nós a menos de uma semana e já anda quebrando diversos recordes. O filme dirigido pelos Irmãos Russo se consagrou como a maior estreia da história do cinema, arrecadando no seu primeiro fim de semana US$ 250 milhões nos EUA e obtendo uma bilheteria global de mais de US$ 630 milhões.</p>
@@ -111,6 +115,7 @@ Será que finalmente veremos Jinbe juntando-se aos chapéu de palha? Tudo vai de
         ]);
 
         DB::table('noticia')->insert([
+            'title' => 'Fim de Harry Potter...JK! Rolling anuncia novo livro focado na família de Bicuço antes de conhecer Hagrid',
             'text' => "<h1>Fim de Harry Potter...JK! Rolling anuncia novo livro focado na família de Bicuço antes de conhecer Hagrid</h1>
                 </br>
 A Nippon perguntou a Kishimoto sobre o crescimento das comparações entre Naruto e Harry Potter. O autor disse que nunca leu os livros, mas entende porque os fãs veem semelhanças.
@@ -126,6 +131,7 @@ Para os fãs, as comparações entre Naruto e Harry Potter são bem diretas. Nar
         ]);
 
         DB::table('noticia')->insert([
+            'title' => 'No more grayscale: DC anuncia que seus filmes daqui pra frente serão mais coloridos que o arco-íris',
             'text' => "<h1>No more grayscale: DC anuncia que seus filmes daqui pra frente serão mais coloridos que o arco-íris</h1>
                 </br>
                 <p>Vingadores 4 só chega aos cinemas daqui a um ano, entretanto, até o momento poucas informações foram divulgadas sobre o filme e nem mesmo sabemos como devemos chamá-lo.</p>
