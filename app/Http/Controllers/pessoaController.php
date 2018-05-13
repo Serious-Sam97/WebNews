@@ -43,23 +43,14 @@ class pessoaController extends Controller
     }
     public function show(Request $request,$id)
     {
-        
-        // $usuarios = pessoa::retornaUsuarios()->toArray();
-        // $all = $request->all();
+        session_start();
+        $_SESSION['id'] = $id;
+        $_SESSION['nome'] = $nome;
 
-        // if ($request->session()->has($id)) {
-        //     foreach ($usuarios as  $usu){
-        //         if($id == $usu['id']){
-        //             $nome = $usu['nome'];
+        $nomeLogin = $_SESSION['nome'];
 
-        //             return homeController::index($nome);
-        //         }
-        //     }
+        return homeController::index($nomeLogin);
 
-        //     return homeController::index();
-        // }
-
-       
     }
 
     public function logout(){
