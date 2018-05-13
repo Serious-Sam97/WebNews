@@ -33,18 +33,17 @@ class pessoaController extends Controller
 
         foreach ($usuarios as  $usu){
             if($all['email'] == $usu['email'] && $all['senha'] == $usu['senha']){
-                session(['id' => $usu['id']]);
-                session(['nome' => $usu['nome']]);
-                return self::show($usu['id'],$usu['nome']);
-            }else {
-                echo('
-                <script type="text/javascript">
-                alert("Po cara você errou o email ou a senha!");
-                </script>');
-                break;
+                    session(['id' => $usu['id']]);
+                    session(['nome' => $usu['nome']]);
+                    return self::show($usu['id'], $usu['nome']);
             }
         }
+        echo('<script type="text/javascript">
+            alert("Po cara você errou o email ou a senha!");
+            </script>');
+
         return self::index();
+
     }
     public function show($id,$nome)
     {
