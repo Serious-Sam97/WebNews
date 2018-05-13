@@ -87,7 +87,7 @@
 
 <ul class = "fonte">
     <form action="/">
-        <li class="esquerda "><button class="botao preto cor" type="submit">Home</button></li>
+        <li class="esquerda"><button class="active botaohome cor" type="submit">Home</button></li>
     </form>
     <li class="esquerda "><a href="#Tecnologia">Tecnologia</a></li>
     <li class="esquerda "><a href="#Animes">Animes/Mangás</a></li>
