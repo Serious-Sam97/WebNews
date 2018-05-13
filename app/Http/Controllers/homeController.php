@@ -16,7 +16,8 @@ class homeController extends Controller
         if(!$value)
             return \View::make('home')
                 ->with('nome', $nome)
-                ->with('noticias', $noticias);
+                ->with('noticias', $noticias)
+                ->with('carro', 'sim');
 
         return \View::make('home')
             ->with('nome', $value)
@@ -34,7 +35,8 @@ class homeController extends Controller
         if(!$value)
             return \View::make('home')
                 ->with('nome', $nome)
-                ->with('noticias', $noticias);
+                ->with('noticias', $noticias)
+                ->with('carro', 'nao');;
 
         return \View::make('home')
             ->with('nome', $value)
