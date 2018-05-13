@@ -13,14 +13,18 @@ class NoticiaTable extends Migration
      */
     public function up()
     {
+
         if(!Schema::hasTable('noticia')) {
             Schema::create('noticia', function (Blueprint $table) {
                 $table->increments('id');
+                $table->text('title');
                 $table->longText('text');
                 $table->string('imagem');
+                $table->integer('cat');
                 $table->timestamps();
             });
         }
+
     }
 
     /**
