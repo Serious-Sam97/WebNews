@@ -11,6 +11,8 @@ class NoticiaController extends Controller
     function index(Request $request){
         $all = $request->all();
 
+        $value = session('nome');
+
         $articles = Noticia::returnArticle($all['id']);
         $articles = $articles->toArray();
 
@@ -19,10 +21,17 @@ class NoticiaController extends Controller
 
         $imgLogo = 'images/portal.png';
 
+        if(!$value)
+            return \View::make('noticiaGenerica')
+                ->with('imgLogo', $imgLogo)
+                ->with('text', $text)
+                ->with('imgText', $imgText)
+                ;
         return \View::make('noticiaGenerica')
             ->with('imgLogo', $imgLogo)
             ->with('text', $text)
             ->with('imgText', $imgText)
+            ->with('nome', $value)
             ;
     }
 }

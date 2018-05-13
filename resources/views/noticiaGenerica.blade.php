@@ -40,7 +40,12 @@
     <li class="esquerda"><a href="#Jogos">Jogos</a></li>
     <li class="esquerda"><a href="#Livros">Livros</a></li>
     <li class="entrar"><img src = "img/loginuser.png" class ="imgicon">
-        <a class="entrar" href="pessoaCadastro"> Entrar </a>
+    @if($nome == 'Entrar')
+        <li class="entrar"><a href="pessoaCadastro"> {!! $nome !!}</a></li>
+    @else
+        <li class="entrar"><a href="logout">Logout</a></li>
+        <li class="entrar alinhar">{!! $nome !!}</li>
+    @endif
 
 </ul>
 <div class="container">

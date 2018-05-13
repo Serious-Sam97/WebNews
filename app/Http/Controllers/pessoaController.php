@@ -30,13 +30,13 @@ class pessoaController extends Controller
     }
     public function login(Request $request){
         $all = $request->all();
-        
-        session(['nome' => ]);
 
         $usuarios = pessoa::retornaUsuarios()->toArray();
 
         foreach ($usuarios as  $usu){
             if($all['email'] == $usu['email'] && $all['senha'] == $usu['senha']){
+                session(['id' => $usu['id']]);
+                session(['nome' => $usu['nome']]);
                 return self::show($usu['id'],$usu['nome']);
             }
         }
