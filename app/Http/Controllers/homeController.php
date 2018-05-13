@@ -20,7 +20,8 @@ class homeController extends Controller
 
         return \View::make('home')
             ->with('nome', $value)
-            ->with('noticias', $noticias);
+            ->with('noticias', $noticias)
+            ->with('carro', 'sim');
     }
 
     function category(Request $request, $nome = 'Entrar'){
@@ -37,7 +38,8 @@ class homeController extends Controller
 
         return \View::make('home')
             ->with('nome', $value)
-            ->with('noticias', $noticias);
+            ->with('noticias', $noticias)
+            ->with('carro', 'nao');
     }
 
 }

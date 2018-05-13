@@ -39,7 +39,7 @@ class seed_noticia extends Seeder
 
                 Fumito Ueda é o criador de outras obras aclamadas na indústria de games, como os clássicos Ico (PS2, 2001) e Shadow of the Colossus (PS2, 2005). Ambos são imediatamente reconhecidos pelos críticos e lembrados pelos fãs pelo esmero do criador nos campos de level design, direção de arte e narrativa.</br>",
             'imagem' => "images/lastguardian.png",
-            'cat'=> 7,
+            'cat'=> 6,
         ]);
 
         DB::table('noticia')->insert([
@@ -80,7 +80,7 @@ Será que finalmente veremos Jinbe juntando-se aos chapéu de palha? Tudo vai de
 <p>Ele ainda comenta que o serviço do Switch será focado mais em oferecer produtos, e não tanto em funcionalidades. O executivo Shinya Takanashi ainda complementa dizendo que eles tem boas ideias de como fazer o serviço online premium do Nintendo Switch se tornar atrativo, e que valerá a pena conferir o anúncio dos recursos que o serviço vai oferecer.</p>
 <p>E aí donos de Switch, animados com o anúncio?</p>",
             'imagem' => "images/nintendointernet.png",
-            'cat'=> 7,
+            'cat'=> 6,
         ]);
 
         DB::table('noticia')->insert([
@@ -115,7 +115,7 @@ Será que finalmente veremos Jinbe juntando-se aos chapéu de palha? Tudo vai de
 
 ",
             'imagem' => "images/jarjar.png",
-            'cat'=> 5,
+            'cat'=> 4,
         ]);
 
         DB::table('noticia')->insert([
@@ -132,7 +132,7 @@ Para os fãs, as comparações entre Naruto e Harry Potter são bem diretas. Nar
 
 ",
             'imagem' => "images/jkrolling.png",
-            'cat'=> 8,
+            'cat'=> 7,
         ]);
 
         DB::table('noticia')->insert([
@@ -149,7 +149,86 @@ Para os fãs, as comparações entre Naruto e Harry Potter são bem diretas. Nar
 <p>“Definitivamente ele não é chamado assim”.</p>
 <p>Vingadores: Guerra Infinita já está em cartaz e você pode conferir o nosso review <a href=\"https://criticalhits.com.br/vingadores-guerra-infinita-review/\">aqui</a>.</p>",
             'imagem' => "images/bvs.png",
+            'cat'=> 3,
+        ]);
+
+        DB::table('noticia')->insert([
+            'title' => 'Batman | HQ mostra o passado de Alfred na guerra',
+            'text' => "<h1>Batman | HQ mostra o passado de Alfred na guerra</h1>
+</br>
+<p>A Panini lançou recentemente no Brasil a edição 11 de Grandes Astros Batman, publicação que continua o arco O Primeiro Aliado. A obra mostra o passado de Alfred na guerra lutando pelas forças armadas inglesas. Confira a capa:
+A publicação foca nas motivações de Alfred e como ele virou o mordomo dos Wayne.
+Depois de deixar a série mensal do Batman, Scott Snyder criou uma nova HQ para contar histórias com os vilões que ele não aproveitou anteriormente. Assim nasceu Grandes Astros Batman (All Star Batman), publicações que tinham como ideia edições individuais ou arcos curtos com esses vilões.</p>",
+            'imagem' => "images/batman.jpg",
+            'cat'=> 3,
+        ]);
+
+        DB::table('noticia')->insert([
+            'title' => 'MILLA JOVOVICH SERÁ PROTAGONISTA DE FILME DE MONSTER HUNTER',
+            'text' => "<h1>MILLA JOVOVICH SERÁ PROTAGONISTA DE FILME DE MONSTER HUNTER</h1>
+</br>
+<p>A atriz Milla Jovovich, responsável por interpretar Alice na série de longas de Resident Evil, será protagonista no filme da franquia Monster Hunter. Ainda não foi revelado qual papel a atriz desempenhará (via Variety). As filmagens acontecerão na África do Sul.
+A adaptação cinematográfica será produzida pela Constantin Film, e tem um orçamento especulado em cerca de US$ 60 milhões. Paul W. S. Anderson, que dirigiu a franquia de Resident Evil, juntará-se a Milla para ser diretor do filme.
+Quanto à franquia, recentemente foi revelado que a Capcom teve o ano mais lucrativo da história da empresa, sucesso que pode ser atribuído às vendas de Monster Hunter: World.</p>",
+            'imagem' => "images/milla.jpg",
             'cat'=> 4,
+        ]);
+
+        DB::table('noticia')->insert([
+            'title' => 'OVERWATCH: SONY NEGA LUCRO COM SKIN BENEFICENTE DE MERCY',
+            'text' => "<h1>OVERWATCH: SONY NEGA LUCRO COM SKIN BENEFICENTE DE MERCY</h1>
+</br>
+<p>Após jogadores notarem uma diferença no valor entre plataformas da doação para adquirir o novo visual Rosa de Mercy em Overwatch, um usuário do Twitter destacou a descrição do produto na loja PlayStation Store. Enquanto a Blizzard se propôs a repassar 100% do valor arrecadado à instituição Breast Cancer Research Foundation (BCRF), que tem como foco a prevenção e combate ao câncer de mama, a PS Store lista Mercy Rosa da seguinte maneira:</p>
+</br>
+<p>\"... a Blizzard Entertainment doará 100% do dinheiro que receber da Sony PlayStation, proveniente da venda do visual Mercy Rosa para a Breast Cancer Research Foundation.\"</p>
+</br>
+<p>O usuário do Twitter notou que há uma possível brecha, significando que a Sony pode estar lucrando com o valor das doações. Ele ressalta que a empresa pode ficar com 22% do dinheiro arrecadado. Na loja britânica, a Sony diz que doará ‎10,12 libras (£), embora o produto custe 12,99 libras (£).
+Em um comunicado ao site Eurogamer, a Sony disse que “não está ganhando nenhum lucro com as vendas da Mercy Rosa de Overwatch”. Se 100% do valor seria doado à BCRF após repassá-lo à Blizzard, a dúvida que fica é para onde as 2,87 libras (£) são destinadas. Especulando, o valor pode ser destinado à taxa para manter o produto na loja. No entanto, isso não explica a diferença com o preço de Xbox One.
+No Brasil, o preço da skin é R$ 29 para Xbox One, R$ 45,90 para PS4 e R$ 49,90 para PC. É notável que o menor valor de doação é pela Microsoft Store, enquanto o maior é pela própria Blizzard, por meio da Battle.net.
+Em termos de comparação com a PS Store, a descrição da Microsoft Store diz que \"... a Blizzard Entertainment doará 100% do preço de venda do visual Mercy Rosa no Xbox para a Breast Cancer Research Foundation\".</p>",
+            'imagem' => "images/over.jpg",
+            'cat'=> 6,
+        ]);
+
+        DB::table('noticia')->insert([
+            'title' => 'Brooklyn Nine-Nine é salva pela NBC e renovada para sexta temporada',
+            'text' => "<h1>Brooklyn Nine-Nine é salva pela NBC e renovada para sexta temporada</h1>
+</br>
+<p>Os últimos dias foram de emoções fortes para os fãs de Brooklyn Nine-Nine. Na quinta-feira, a Fox anunciou que não renovaria a série e que a atual temporada (a quinta) seria a última. No mesmo dia, começaram a surgir informações que outras emissoras estariam interessadas na produção, especialmente Hulu e Netflix. Na sexta, as duas companhias anunciaram que não seguiriam em frente com a ideia, o que deixou os fãs ainda mais decepcionados. </p>
+</br>
+<p>Aí, no finalzinho da sexta, aos 45 do segundo tempo, a NBC anunciou que a série iria para o casal e receberia uma sexta temporada com 13 episódios.
+As cinco temporadas de B99 tiveram entre 22 e 23 episódios, mas para quem estava com os dias contados, 13 a mais já é um plano e tanto. Importante lembrar ainda que a redução não significa que só teremos mais uma temporada. A NBC tem feito comédias com episódios reduzidos, como é o caso do sucesso The Good Place. Por sinal, tanto B99 quando The Good Place são produzidas por Mike Schur, que também fez Parks and Recreation e The Office pra NBC. Deixem este sujeito trabalhar!
+Presidente de entretenimento da NBC, Robert Greenblatt destacou: \"Desde que a série foi vendida pra Fox que me arrependo de ter deixado ela partir. Está na hora de voltar para sua casa de direito.\"</p>",
+            'imagem' => "images/99.jpg",
+            'cat'=> 5,
+        ]);
+
+        DB::table('noticia')->insert([
+            'title' => 'Editora da UFJF retoma venda de livros',
+            'text' => "<h1>Editora da UFJF retoma venda de livros</h1>
+</br>
+<p>Os interessados em ler produções científicas possuem mais uma opção para compra de livros. As publicações da Editora da Universidade Federal de Juiz de Fora (UFJF) voltaram a ser comercializadas no último mês.</p>
+</br>
+<p>A editora estava há três anos sem vender suas obras, devido ao vencimento do contrato com a fundação que administrava a parte financeira e jurídica. O setor financeiro da própria Universidade assumiu os trabalhos, regularizando a situação. O processo de revisão, diagramação e impressão de livros, por sua vez, não havia sofrido impacto e continuou funcionando normalmente durante todo o período.</p>
+</br>
+<p>Lucimar Bartels, que atua na área comercial da Editora, destaca que esse trabalho é um dos instrumentos mais importantes para divulgar a ciência da UFJF. “A maioria das obras é fruto de longos anos de pesquisa dos docentes da UFJF e com a volta das vendas todo esse conhecimento volta a circular”, explica Lucimar. As publicações também incentivam a aproximação com outras instituições por meio do Programa Interuniversitário de Distribuição do Livro (PIDL) e da Associação Brasileira de Editoras Universitárias (ABEU).</p>",
+            'imagem' => "images/livro.jpg",
+            'cat'=> 7,
+        ]);
+
+        DB::table('noticia')->insert([
+            'title' => 'NVIDIA deve lançar novas placas de vídeo para laptop até o fim de 2018',
+            'text' => "<h1>NVIDIA deve lançar novas placas de vídeo para laptop até o fim de 2018</h1>
+</br>
+<p>Uma nova geração de placas de vídeo para laptop deve ser lançada pela NVIDIA até o fim de 2018. A informação veio de um representante da fabricante de hardware Gigabyte/Aorus UK, por meio de uma publicação no fórum da loja de hardware britânica OverclockersUK.
+De acordo com um print da publicação obtido pelo site Wccftech, a conversa se deu da seguinte maneira: um usuário perguntou sobre possíveis atualizações das especificações do laptop Gigabyte Aero 15X, e o representante respondeu que o modelo só deve sofrer alterações significativas quando uma nova geração de placas de vídeo for lançada, o que está previsto para o fim do ano. 
+Considerando o caráter quase oficial da resposta, que foi assinada em nome do time Gigabyte UK, e o fato de que o Aero 15X utiliza a placa NVIDIA GeForce GTX 1070 8 GB, sites especializados internacionais, como o Wccftech e o TechRadar, apostam que a resposta se refere à próxima geração de placas de vídeo para laptop da marca estadunidense.</p>
+</br>
+<p>Desde que o texto do Wccftech sobre o tema foi publicado, a thread do fórum foi retirada do ar, sem que houvesse qualquer confirmação oficial sobre o tema. Ainda assim, o TechRadar reporta que o representante continua ativo, respondendo diversos outros comentários e dúvidas postados no fórum, o que leva a crer que ele é real.</p>
+</br>
+<p>O site informa ainda que não existe qualquer indicação da NVIDIA (ou empresas parceiras) de que uma nova geração de placas de vídeos para desktop seja lançada em breve. No entanto, esta não seria a primeira série de placas exclusiva para laptops desenvolvidas pela empresa americana, já que a linha GeForce 800 também não tem uma série equivalente para desktops.</p>",
+            'imagem' => "images/nvidea.jpg",
+            'cat'=> 1,
         ]);
     }
 }

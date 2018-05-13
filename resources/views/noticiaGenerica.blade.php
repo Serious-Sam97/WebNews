@@ -23,25 +23,25 @@
     <div class ="container">
         <div class ="row">
             <div class = "col-md-12" align = "center">
-                <br>
-                <a href="home"><img src = "{{ asset($imgLogo) }}" class = "imglogo" ></a>
+                <img src = "{{ asset($imgLogo) }}" class = "imglogo">
             </div>
+        </div>
+    </div>
 
 </header>
 </br>
 
-<ul>
+<ul class = "fonte">
     <form action="/">
         <li class="esquerda"><button class="active botaohome corAl" type="submit">Home</button></li>
     </form>
-    <li class="esquerda"><a href="#Tecnologia">Tecnologia</a></li>
-    <li class="esquerda"><a href="#Animes">Animes/Mangás</a></li>
-    <li class="esquerda"><a href="#Comics">HQ's/Comics</a></li>
-    <li class="esquerda"><a href="#Filmes">Filmes</a></li>
-    <li class="esquerda"><a href="#Series">Séries</a></li>
-    <li class="esquerda"><a href="#Jogos">Jogos</a></li>
-    <li class="esquerda"><a href="#Livros">Livros</a></li>
-    <li class="entrar"><img src = "img/loginuser.png" class ="imgicon">
+    <li class="esquerda"><button onclick="returnCategory(1)" class="active botaoAdicionais corAl" type="submit">Tecnologia</button></li>
+    <li class="esquerda"><button onclick="returnCategory(2)" class="active botaoAdicionais corAl" type="submit">Animes/Mangás</button></li>
+    <li class="esquerda"><button onclick="returnCategory(3)" class="active botaoAdicionais corAl" type="submit">HQ's/Comics</button></li>
+    <li class="esquerda"><button onclick="returnCategory(4)" class="active botaoAdicionais corAl" type="submit">Filmes</button></li>
+    <li class="esquerda"><button onclick="returnCategory(5)" class="active botaoAdicionais corAl" type="submit">Séries</button></li>
+    <li class="esquerda"><button onclick="returnCategory(6)" class="active botaoAdicionais corAl" type="submit">Jogos</button></li>
+    <li class="esquerda"><button onclick="returnCategory(7)" class="active botaoAdicionais corAl" type="submit">Livros</button></li>
     @if($nome == 'Entrar')
         <li class="entrar"><a href="pessoaCadastro"> {!! $nome !!}</a></li>
     @else

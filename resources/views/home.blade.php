@@ -67,7 +67,7 @@
             <div class ="row">
                 <div class = "col-md-12" align = "center">
                     <form action="/">
-                        <br><img src = "images/portal.png" class = "imglogo" >
+                        <img src = "images/portal.png" class = "imglogo">
                     </form>
                 </div>
             </div>
@@ -97,6 +97,7 @@
 
     </ul>
 
+    @if($carro == 'sim')
     <div class="container">
         <div id="demo" class="carousel slide" data-ride="carousel">
             <ul class="carousel-indicators">
@@ -106,14 +107,22 @@
             </ul>
             <div class="carousel-inner">
                 <div class="carousel-item active lastGuardian">
-                    <img src="images/lastguardian.png" alt="lastguardian">
+                    <img src="{!! $noticias[4]['imagem'] !!}" alt="lastguardian" onclick="returnNoticia({!! $noticias[4]['id'] !!})">
                     <div class="overlay"></div>
                     <div class="carousel-caption">
-                        <h3 class=" fonteslide">Jogos!!</h3>
-                        <p class="fonteslide lastGuardian">Sony anuncia The Last Guardian 2!!</p>
+                        <p class = "fonteslide nintendo" onclick="returnNoticia({!! $noticias[4]['id'] !!})">{!! $noticias[4]['title'] !!}</p>
                     </div>
                 </div>
 
+                @foreach($noticias as $noticia)
+                    <div class="carousel-item nintendo">
+                        <img src="{!! $noticia['imagem'] !!}" onclick="returnNoticia({!! $noticia['id'] !!})" alt="nintendo" >
+                        <div class="overlay"></div>
+                        <div class="carousel-caption">
+                            <p class = "fonteslide nintendo" onclick="returnNoticia({!! $noticia['id'] !!})">{!! $noticia['title'] !!}</p>
+                        </div>
+                    </div>
+                @endforeach
                 <div class="carousel-item nintendo">
                     <img src="images/nintendointernet.png" alt="nintendo" >
                     <div class="overlay"></div>
@@ -140,6 +149,8 @@
             </a>
         </div>
     </div>
+    @endif
+
     <table>
         <div class="container">
             <div class="row">
