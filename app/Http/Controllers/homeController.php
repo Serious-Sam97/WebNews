@@ -12,6 +12,7 @@ class homeController extends Controller
         $noticias = Noticia::returnNoticias();
 
         $value = session('nome');
+        $id = session('id');
 
         if(!$value)
             return \View::make('home')
@@ -22,7 +23,8 @@ class homeController extends Controller
         return \View::make('home')
             ->with('nome', $value)
             ->with('noticias', $noticias)
-            ->with('carro', 'sim');
+            ->with('carro', 'sim')
+            ->with('id', $id);
     }
 
     function category(Request $request, $nome = 'Entrar'){

@@ -10,11 +10,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+//Home
 Route::get('/', 'homeController@index');
+//------------------------------------------------------------
 
 //Category
 Route::get('category', 'homeController@category');
+//------------------------------------------------------------
 
 //Cadastrar-Login
 Route::get('pessoaCadastro','pessoaController@index');
@@ -24,7 +26,14 @@ Route::get('teste','pessoaController@teste');
 Route::get('cadastrar','pessoaController@store');
 Route::get('login','pessoaController@login');
 Route::get('logout','pessoaController@logout');
+//------------------------------------------------------------
 
 //Noticia
 Route::get('noticia', 'NoticiaController@index');
+//------------------------------------------------------------
+
+//User
+Route::get('user', 'userController@index');
+Route::get('redefinirSenha', 'userController@redefinirSenhaView');
+Route::get('redefinirSenhaEmail', 'userController@redefinirSenha');
 //------------------------------------------------------------
