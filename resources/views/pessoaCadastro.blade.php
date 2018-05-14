@@ -37,7 +37,6 @@
                     }
                 })
             });
-
         });
     </script>
 </head>
@@ -140,10 +139,14 @@
             <button class="botao botaopreto cor" type="submit">Confirmar</button>
             </form>
             </br>
+            <form action="redefinirSenha">
+            <button class="botao botaopreto cor" type="submit">Esqueceu a senha?</button>
+            </form>
+            </br>
+            </br>
             </br>
             <h5 style = "color: dodgerblue">Não tem Cadastro?</h5>
             </br>
-
             <button class="botao botaopreto cor" id="hide" ><a>Cadastre-se</a></button>
         </div>
     </div>

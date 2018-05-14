@@ -43,7 +43,7 @@
     <li class="esquerda"><button onclick="returnCategory(6)" class="botaoAdicionais corAl" type="submit">Jogos</button></li>
     <li class="esquerda"><button onclick="returnCategory(7)" class="botaoAdicionais corAl" type="submit">Livros</button></li>
     @if($nome == 'Entrar')
-        <li class="entrar"><a href="pessoaCadastro"> {!! $nome !!}</a></li>
+        <li class="entrar"><button onclick="returnCategory(1)" class="botaoAdicionais corAl" type="submit">{!! $nome !!}</button></li>
     @else
         <li class="entrar"><a href="logout">Logout</a></li>
         <li class="entrar alinhar">{!! $nome !!}</li>

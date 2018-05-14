@@ -50,8 +50,26 @@
                     $('#container').fadeOut().html($data).fadeIn();
 
                 }
-            })
+            });
         }
+
+            function userScreen(id) {
+                $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
+                    url: "user",
+                    method: 'get',
+                    data: {
+                        id: id
+                    },
+                    success: function (data) {
+                        $data = $(data);
+                        $('#container').fadeOut().html($data).fadeIn();
+
+                    }
+                })
+            }
     </script>
 
 
@@ -90,65 +108,71 @@
         <li class="esquerda"><button onclick="returnCategory(7)" class="botaoAdicionais corAl" type="submit">Livros</button></li>
         @if($nome == 'Entrar')
             <li class="entrar"><a href="pessoaCadastro"> {!! $nome !!}</a></li>
+
         @else
             <li class="entrar"><a href="logout">Logout</a></li>
-            <li class="entrar alinhar">{!! $nome !!}</li>
+            <li class="entrar"><button onclick="userScreen(1)" class="botaoAdicionais corAl" type="submit">{!! $nome !!}</button></li>
         @endif
 
     </ul>
 
     @if($carro == 'sim')
-    <div class="container">
-        <div id="demo" class="carousel slide" data-ride="carousel">
-            <ul class="carousel-indicators">
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>
-            </ul>
-            <div class="carousel-inner">
-                <div class="carousel-item active lastGuardian">
-                    <img src="{!! $noticias[4]['imagem'] !!}" alt="lastguardian" onclick="returnNoticia({!! $noticias[4]['id'] !!})">
-                    <div class="overlay"></div>
-                    <div class="carousel-caption">
-                        <p class = "fonteslide nintendo" onclick="returnNoticia({!! $noticias[4]['id'] !!})">{!! $noticias[4]['title'] !!}</p>
-                    </div>
-                </div>
-
-                @foreach($noticias as $noticia)
+        <div class="container">
+            <div id="demo" class="carousel slide" data-ride="carousel">
+                <ul class="carousel-indicators">
+                    @foreach($noticias as $key => $noticia)
+                        @if($key == 0)
+                            <li data-target="#demo" data-slide-to="0" class="active"></li>
+                        @endif
+                        <li data-target="#demo" data-slide-to="1"></li>
+                    @endforeach
+                </ul>
+                <div class="carousel-inner">
+                    @foreach($noticias as $key => $noticia)
+                        @if($key == 0)
+                            <div class="carousel-item active lastGuardian">
+                                <img src="{!! $noticia['imagem'] !!}" alt="lastguardian" onclick="returnNoticia({!! $noticia['id'] !!})">
+                                <div class="overlay"></div>
+                                <div class="carousel-caption">
+                                    <p class = "fonteslide nintendo" onclick="returnNoticia({!! $noticia['id'] !!})">{!! $noticia['title'] !!}</p>
+                                </div>
+                            </div>
+                            @continue
+                        @endif
+                        <div class="carousel-item nintendo">
+                            <img src="{!! $noticia['imagem'] !!}" onclick="returnNoticia({!! $noticia['id'] !!})" alt="nintendo" >
+                            <div class="overlay"></div>
+                            <div class="carousel-caption">
+                                <p class = "fonteslide nintendo" onclick="returnNoticia({!! $noticia['id'] !!})">{!! $noticia['title'] !!}</p>
+                            </div>
+                        </div>
+                    @endforeach
                     <div class="carousel-item nintendo">
-                        <img src="{!! $noticia['imagem'] !!}" onclick="returnNoticia({!! $noticia['id'] !!})" alt="nintendo" >
+                        <img src="images/nintendointernet.png" alt="nintendo" >
                         <div class="overlay"></div>
                         <div class="carousel-caption">
-                            <p class = "fonteslide nintendo" onclick="returnNoticia({!! $noticia['id'] !!})">{!! $noticia['title'] !!}</p>
+                            <h3 class = "fonteslide">Tecnologia!!</h3>
+                            <p class = "fonteslide nintendo">Nintendo anuncia proximo console!!</p>
                         </div>
                     </div>
-                @endforeach
-                <div class="carousel-item nintendo">
-                    <img src="images/nintendointernet.png" alt="nintendo" >
-                    <div class="overlay"></div>
-                    <div class="carousel-caption">
-                        <h3 class = "fonteslide">Tecnologia!!</h3>
-                        <p class = "fonteslide nintendo">Nintendo anuncia proximo console!!</p>
-                    </div>
-                </div>
 
-                <div class="carousel-item onePiece">
-                    <img src="images/onepiece.png" alt="onepiece" >
-                    <div class="overlay"></div>
-                    <div class="carousel-caption">
-                        <h3 class = "fonteslide">Animes!!</h3>
-                        <p class = "fonteslide onePiece">Oda solta o verbo: One Piece deve chegar até o milésimo capítulo! Veja os spoilers quentinhos </p>
+                    <div class="carousel-item onePiece">
+                        <img src="images/onepiece.png" alt="onepiece" >
+                        <div class="overlay"></div>
+                        <div class="carousel-caption">
+                            <h3 class = "fonteslide">Animes!!</h3>
+                            <p class = "fonteslide onePiece">Oda solta o verbo: One Piece deve chegar até o milésimo capítulo! Veja os spoilers quentinhos </p>
+                        </div>
                     </div>
                 </div>
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
             </div>
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
         </div>
-    </div>
     @endif
 
     <table>

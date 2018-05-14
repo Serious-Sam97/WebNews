@@ -8,11 +8,12 @@ use App\pessoa;
 class pessoaController extends Controller
 {
 
-    public function index($nome = 'Entrar') {
+    public function index($nome = 'Entrar')
+    {
 
         $value = session('nome');
 
-        if(!$value)
+        if (!$value)
             return \View::make('pessoaCadastro')
                 ->with('nome', $nome);
 
@@ -24,9 +25,10 @@ class pessoaController extends Controller
     {
         $cadastroA = pessoa::retornaUsuarios()->toArray();
 
-        $tudo = $request ->all();
-        foreach ($cadastroA as $cad){
-            if($tudo['nome'] || $tudo['email'] || $tudo['senha'] || $tudo['nascimento'] || $tudo['sexo'] == null){
+        $tudo = $request->all();
+
+        foreach ($cadastroA as $key => $cad) {
+            if (!$tudo['nome'] || $tudo['email'] == $cad['email'] || !$tudo['senha'] || !$tudo['nascimento'] || !$tudo['sexo']) {
                 echo('<script type="text/javascript">
             alert("Você não preencheu algum campo!");
             </script>');
@@ -34,29 +36,31 @@ class pessoaController extends Controller
                 return self::index();
             }
         }
-        
+
         $out = new pessoa();
-            $out->nome       = $tudo['nome'];
-            $out->senha      = $tudo['senha'];
-            $out->email      = $tudo['email'];
-            $out->nascimento = $tudo['nascimento'];
-            $out->sexo       = $tudo['sexo'];
+        $out->nome = $tudo['nome'];
+        $out->senha = $tudo['senha'];
+        $out->email = $tudo['email'];
+        $out->nascimento = $tudo['nascimento'];
+        $out->sexo = $tudo['sexo'];
         $out->save();
 
         session(['nome' => $tudo['nome']]);
 
         return self::show($tudo['nome']);
     }
-    public function login(Request $request){
+
+    public function login(Request $request)
+    {
         $all = $request->all();
 
         $usuarios = pessoa::retornaUsuarios()->toArray();
 
-        foreach ($usuarios as  $usu){
-            if($all['email'] == $usu['email'] && $all['senha'] == $usu['senha']){
+        foreach ($usuarios as $usu) {
+            if ($all['email'] == $usu['email'] && $all['senha'] == $usu['senha']) {
                 session(['id' => $usu['id']]);
                 session(['nome' => $usu['nome']]);
-                return self::show($usu['id'],$usu['nome']);
+                return self::show($usu['id'], $usu['nome']);
             }
         }
         echo('<script type="text/javascript"> 
@@ -66,6 +70,7 @@ class pessoaController extends Controller
         return self::index();
 
     }
+
     public function show($nome)
     {
         session_start();
@@ -74,17 +79,10 @@ class pessoaController extends Controller
         return homeController::index($nomeLogin);
     }
 
-    public function logout(){
-      session()->flush();
+    public function logout()
+    {
+        session()->flush();
 
         return homeController::index();
     }
-
-    public function teste(Request $request){
-        $all = $request->all();
-        var_dump($all);
-        die();
-    }
 }
-// SÓ RETORNA INT
-//public function index(int $id)
