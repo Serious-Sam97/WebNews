@@ -37,7 +37,6 @@
                     }
                 })
             });
-
         });
     </script>
 </head>
@@ -50,7 +49,7 @@
         <div class ="row">
             <div class = "col-md-12" align = "center">
                 <br>
-                <a href="/"><img src = "images/portal.png" class = "imglogo" ></a>
+                <img src = "images/portal.png" class = "imglogo">
             </div>
         </div>
     </div>
@@ -60,15 +59,16 @@
 
 
 
-<ul>
-    <li class="esquerda"><a class="active" href="/" style="text-decoration:none">Home</a></li>
-    <li class="esquerda"><a href="#Tecnologia">Tecnologia</a></li>
-    <li class="esquerda"><a href="#Animes">Animes/Mangás</a></li>
-    <li class="esquerda"><a href="#Comics">HQ's/Comics</a></li>
-    <li class="esquerda"><a href="#Filmes">Filmes</a></li>
-    <li class="esquerda"><a href="#Series">Séries</a></li>
-    <li class="esquerda"><a href="#Jogos">Jogos</a></li>
-    <li class="esquerda"><a href="#Livros">Livros</a></li>
+<ul class = "fonte">
+    <form action="/">
+        <li class="esquerda"><button class="active botaohome corAl" type="submit">Home</button></li>
+    </form>
+    @if($nome == 'Entrar')
+        <li class="entrar"><a href="pessoaCadastro"> {!! $nome !!}</a></li>
+    @else
+        <li class="entrar"><a href="logout">Logout</a></li>
+        <li class="entrar alinhar">{!! $nome !!}</li>
+    @endif
 
 </ul>
 <div class="container">
@@ -139,10 +139,14 @@
             <button class="botao botaopreto cor" type="submit">Confirmar</button>
             </form>
             </br>
+            <form action="redefinirSenha">
+            <button class="botao botaopreto cor" type="submit">Esqueceu a senha?</button>
+            </form>
+            </br>
+            </br>
             </br>
             <h5 style = "color: dodgerblue">Não tem Cadastro?</h5>
             </br>
-
             <button class="botao botaopreto cor" id="hide" ><a>Cadastre-se</a></button>
         </div>
     </div>

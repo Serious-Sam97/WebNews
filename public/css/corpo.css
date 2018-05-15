@@ -6,6 +6,11 @@
 .cor:hover{
     color:blue;
 }
+
+.corAl:hover{
+    color:blue;
+
+}
 .botaopreto{
 	color: white; 
 	text-decoration:none;
@@ -13,6 +18,12 @@
 .botao{
 	background-color: #008CBA;
     border: 2px solid blue;
+	border-radius:8px;
+}
+
+.botaoal{
+	background-color: #333;
+    border: 2px solid #333;
 	border-radius:8px;
 }
 .login{
@@ -27,6 +38,15 @@
     padding: 14px 16px;
     text-decoration: none;
     border: 2px solid #0E67B6;
+}
+.botaoAdicionais{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: 2px solid #333;
+    background-color:#333;
 }
 h6{
 	text-align: center;	
