@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\pessoa;
 use Illuminate\Http\Request;
-use mail;
+use Mail;
 
 class userController extends Controller
 {
@@ -32,7 +32,18 @@ class userController extends Controller
     public static function redefinirSenha(Request $request){
         $all = $request->all();
 
-        mail($all['email'], 'teste', 'XVIDEOS', 'samir');
+        $data = pessoa::retornaUsuarios()->toArray();
 
+        foreach($data as $pessoa){
+            if($pessoa['email'] == $all['email']){
+                $destino = $pessoa;
+            }
+
+        }
+
+
+        Mail::to($destino['email']) ->send(new \app\Mail\esqueceu($destino));
+        dd("Email is Send.");
+        
     }
 }

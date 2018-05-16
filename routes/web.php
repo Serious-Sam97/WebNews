@@ -26,6 +26,7 @@ Route::get('teste','pessoaController@teste');
 Route::get('cadastrar','pessoaController@store');
 Route::get('login','pessoaController@login');
 Route::get('logout','pessoaController@logout');
+
 //------------------------------------------------------------
 
 //Noticia
