@@ -5,8 +5,8 @@
 </head>
 <body>
 
-<h1>Wow trocou a senha</h1>
-<p>voce e foda {{ $pessoa['nome'] }}</p>
+<h1>(nome do usuario)Você solicitou uma mudança de senha para fazer isso clique no link : http://xvideos.com e siga os procedimentos</h1>
+<p>caso nao tenha pedido desconsiderar o email</p>
 
 </body>
 </html>

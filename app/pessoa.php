@@ -20,4 +20,10 @@ class pessoa extends Model
             ->where('id', $id)
             ->get();
     }
+
+    public static function mudaSenha($id, $nova){ 
+        return self::table('pessoa')
+            ->where('id', $id)
+            ->update(['senha' => $nova]);
+    }
 }

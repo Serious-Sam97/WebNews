@@ -16,7 +16,7 @@ class esqueceu extends Mailable
      * @var Order
      */
     
-    public $pessoa;
+    //public $pessoa;
 
     /**
      * Create a new message instance.
@@ -27,7 +27,7 @@ class esqueceu extends Mailable
 
     public function __construct($pessoa)
     {
-        $this->pessoa = $pessoa;
+        //$this->pessoa = $pessoa;
     }
 
     /**

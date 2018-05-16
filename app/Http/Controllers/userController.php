@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\pessoa;
 use Illuminate\Http\Request;
+use Illuminate\Mail\Mailer;
 use Mail;
 
 class userController extends Controller
@@ -42,8 +43,12 @@ class userController extends Controller
         }
 
 
-        Mail::to($destino['email']) ->send(new \app\Mail\esqueceu($destino));
-        dd("Email is Send.");
+        //Mail::to($destino['email']) ->send(new \App\Mail\esqueceu($destino));
+        
+        echo "<script type='javascript'>alert('Email enviado com Sucesso!');";
+        echo "javascript:window.location='index.php';</script>";
+
+        return homeController::index();
         
     }
 }
