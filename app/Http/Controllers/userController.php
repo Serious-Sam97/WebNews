@@ -29,6 +29,13 @@ class userController extends Controller
     public static function redefinirSenhaView(){
         return \View::make('redefinirSenha');
     }
+    public static function redefinindoSenha(Request $request){
+        $all = $request ->all();
+
+        pessoa::mudarSenha($all["id"], $all["senha"]);
+
+        return homeController::index();
+    }
 
     public static function redefinirSenha(Request $request){
         $all = $request->all();
@@ -41,13 +48,15 @@ class userController extends Controller
             }
 
         }
+        if($destino == null){
+            echo "<script language=javascript>alert('o usuario não existe' );</script>";
+            return homeController::index();
+        }
 
-
-        //Mail::to($destino['email']) ->send(new \App\Mail\esqueceu($destino));
         
-        echo "<script type='javascript'>alert('Email enviado com Sucesso!');";
-        echo "javascript:window.location='index.php';</script>";
 
+        Mail::to($destino['email']) ->send(new \App\Mail\esqueceu($destino));
+            echo "<script language=javascript>alert('verifique a sua caixa de email' );</script>";
         return homeController::index();
         
     }
