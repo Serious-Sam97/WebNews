@@ -15,10 +15,7 @@ class seed_categoria extends Seeder
             'nome' => 'tecnologia',
         ]);
         DB::table('categoria')->insert([
-            'nome' => 'anime',
-        ]);
-        DB::table('categoria')->insert([
-            'nome' => 'manga',
+            'nome' => 'anime/manga',
         ]);
         DB::table('categoria')->insert([
             'nome' => 'hq/comics',

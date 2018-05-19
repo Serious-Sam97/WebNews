@@ -232,3 +232,6 @@ Considerando o caráter quase oficial da resposta, que foi assinada em nome do t
         ]);
     }
 }
+
+
+

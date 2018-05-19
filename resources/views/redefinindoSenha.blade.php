@@ -13,33 +13,6 @@
     <meta charset="UTF-8"/>
     <script type = "text/javascript" src="js/jquery-3.3.1.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $("#hide").click(function(){
-                $(".login2").hide();
-                $(".invisivel").show();
-            });
-
-            $('.logar').on('click', function () {
-                $.ajax({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
-                    url: "login",
-                    method: 'get',
-                    data: {
-                        email: $('.email').val(),
-                        senha: $('.senha').val()
-                    },
-                    success: function (data) {
-                        $data = $(data);
-                        $('#abacaxi').fadeOut().html($data).fadeIn();
-                    }
-                })
-            });
-
-        });
-    </script>
 </head>
 
 <body>
@@ -64,25 +37,22 @@
     <form action="/">
         <li class="esquerda"><button class="active botaohome corAl" type="submit">Home</button></li>
     </form>
-    @if($nome == 'Entrar')
-        <li class="entrar"><a href="pessoaCadastro"> {!! $nome !!}</a></li>
-    @else
-    <li class="entrar"><a href="logout">Logout</a></li>
-    <li class="entrar"><button onclick= {!! $id !!} class="botaoAdicionais corAl" type="submit">{!! $nome !!}</button></li>
-        
-    @endif
 
 </ul>
 
 <div class ="container">
     <div class ="row">
         <div class = "col-md-12 fonte login2" align = "center">
-            <h1>{!! $data[0]['nome'] !!}</h1>
-            </br>
-            <h5>{!! $data[0]['email'] !!}</h5>
-            </br>
-            {!! $data[0]['nascimento'] !!}
-            </br>
+            <form action="redefinindoSenha">
+                <input type="hidden" class="" name="id" value = "<?php echo $id?>"/>
+                
+                <label>Digite a nova senha</label>
+                </br>
+                <input type="password" class="senha" name="senha" />
+                </br>
+                </br>
+                <button type="submit" class = "botao botaopreto cor">Concluir</button>
+            </form>
         </div>
     </div>
 </div>

@@ -12,6 +12,8 @@ class NoticiaController extends Controller
         $all = $request->all();
 
         $value = session('nome');
+        $id = session('id');
+        $trueid = "userScreen(".$id.")";
 
         $articles = Noticia::returnArticle($all['id']);
         $articles = $articles->toArray();
@@ -25,13 +27,13 @@ class NoticiaController extends Controller
             return \View::make('noticiaGenerica')
                 ->with('imgLogo', $imgLogo)
                 ->with('text', $text)
-                ->with('imgText', $imgText)
-                ;
+                ->with('imgText', $imgText);
+                
         return \View::make('noticiaGenerica')
             ->with('imgLogo', $imgLogo)
             ->with('text', $text)
             ->with('imgText', $imgText)
             ->with('nome', $value)
-            ;
+            ->with('id', $trueid);
     }
 }
