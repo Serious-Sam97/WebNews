@@ -46,7 +46,7 @@
         <li class="entrar"><button onclick="returnCategory(1)" class="botaoAdicionais corAl" type="submit">{!! $nome !!}</button></li>
     @else
         <li class="entrar"><a href="logout">Logout</a></li>
-        <li class="entrar alinhar">{!! $nome !!}</li>
+        <li class="entrar"><button onclick= {!! $id !!} class="botaoAdicionais corAl" type="submit">{!! $nome !!}</button></li>
     @endif
 
 </ul>

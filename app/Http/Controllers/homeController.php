@@ -13,6 +13,7 @@ class homeController extends Controller
 
         $value = session('nome');
         $id = session('id');
+        $trueid = "userScreen(".$id.")";
 
         if(!$value)
             return \View::make('home')
@@ -24,11 +25,14 @@ class homeController extends Controller
             ->with('nome', $value)
             ->with('noticias', $noticias)
             ->with('carro', 'sim')
-            ->with('id', $id);
+            ->with('id', $trueid);
     }
 
     function category(Request $request, $nome = 'Entrar'){
         $all = $request->all();
+        
+        $id = session('id');
+        $trueid = "userScreen(".$id.")";
 
         $noticias = Noticia::returnByCategory($all['id']);
 
@@ -38,12 +42,13 @@ class homeController extends Controller
             return \View::make('home')
                 ->with('nome', $nome)
                 ->with('noticias', $noticias)
-                ->with('carro', 'nao');;
+                ->with('carro', 'nao');
 
         return \View::make('home')
             ->with('nome', $value)
             ->with('noticias', $noticias)
-            ->with('carro', 'nao');
+            ->with('carro', 'nao')
+            ->with('id', $trueid);
     }
 
 }
