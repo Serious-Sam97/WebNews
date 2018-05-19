@@ -49,7 +49,7 @@
                 <input type="text" class="email" name="email"  placeholder="Digite aqui seu E-mail"/>
                 </br>
                 </br>
-                <button type="submit">Enviar</button>
+                <button type="submit" class = "botao botaopreto cor">Enviar</button>
             </form>
         </div>
     </div>

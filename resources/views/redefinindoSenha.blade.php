@@ -51,7 +51,7 @@
                 <input type="password" class="senha" name="senha" />
                 </br>
                 </br>
-                <button type="submit">Concluir</button>
+                <button type="submit" class = "botao botaopreto cor">Concluir</button>
             </form>
         </div>
     </div>

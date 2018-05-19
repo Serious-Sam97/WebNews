@@ -67,8 +67,9 @@
     @if($nome == 'Entrar')
         <li class="entrar"><a href="pessoaCadastro"> {!! $nome !!}</a></li>
     @else
-        <li class="entrar"><a href="logout">Logout</a></li>
-        <li class="entrar"><button onclick="returnCategory({!! $id !!})" class="botaoAdicionais corAl" type="submit">{!! $nome !!}</button></li>
+    <li class="entrar"><a href="logout">Logout</a></li>
+    <li class="entrar"><button onclick= {!! $id !!} class="botaoAdicionais corAl" type="submit">{!! $nome !!}</button></li>
+        
     @endif
 
 </ul>

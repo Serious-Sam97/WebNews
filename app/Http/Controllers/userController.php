@@ -48,14 +48,14 @@ class userController extends Controller
         foreach($data as $pessoa){
             if($pessoa['id'] == $all['id']){
                 if($pessoa['senha'] == $all['senha']){
-                echo "<script language=javascript>alert('sua senha não pode ser a mesma' );</script>";
+                echo "<script language=javascript>alert('Sua senha não pode ser a mesma' );</script>";
                 return homeController::index();
                 }
             }
         }
         pessoa::mudaSenha($all['id'],$all['senha']);
 
-        echo "<script language=javascript>alert('a sua senha foi alterada com sucesso' );</script>";
+        echo "<script language=javascript>alert('A sua senha foi alterada com sucesso' );</script>";
         return homeController::index();
     }
 
@@ -74,12 +74,12 @@ class userController extends Controller
 
         }
         if($destino == null){
-            echo "<script language=javascript>alert('o usuario não existe' );</script>";
+            echo "<script language=javascript>alert('O usuario não existe' );</script>";
             return homeController::index();
         }
 
         Mail::to($destino['email']) ->send(new \App\Mail\esqueceu($destino));
-            echo "<script language=javascript>alert('verifique a sua caixa de email' );</script>";
+            echo "<script language=javascript>alert('Verifique a sua caixa de email' );</script>";
         return homeController::index();
         
     }

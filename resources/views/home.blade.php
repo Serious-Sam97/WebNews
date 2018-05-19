@@ -111,7 +111,7 @@
 
         @else
             <li class="entrar"><a href="logout">Logout</a></li>
-            <li class="entrar"><button onclick="userScreen(1)" class="botaoAdicionais corAl" type="submit">{!! $nome !!}</button></li>
+            <li class="entrar"><button onclick= {!! $id !!} class="botaoAdicionais corAl" type="submit">{!! $nome !!}</button></li>
         @endif
 
     </ul>
