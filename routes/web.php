@@ -36,5 +36,7 @@ Route::get('noticia', 'NoticiaController@index');
 //User
 Route::get('user', 'userController@index');
 Route::get('redefinirSenha', 'userController@redefinirSenhaView');
-Route::get('redefinirSenhaEmail', 'userController@redefinirSenha');
+Route::get('emailRedefinirSenha', 'userController@emailRedefinirSenha');
+Route::get('redefinindoSenhaIndex', 'userController@redefinindoSenhaIndex');
+Route::get('redefinindoSenha', 'userController@redefinindoSenha');
 //------------------------------------------------------------

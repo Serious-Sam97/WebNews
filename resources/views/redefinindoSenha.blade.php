@@ -44,9 +44,11 @@
     <div class ="row">
         <div class = "col-md-12 fonte login2" align = "center">
             <form action="redefinindoSenha">
+                <input type="hidden" class="" name="id" value = "<?php echo $id?>"/>
+                
                 <label>Digite a nova senha</label>
                 </br>
-                <input type="password" class="senha" name="Senha" />
+                <input type="password" class="senha" name="senha" />
                 </br>
                 </br>
                 <button type="submit">Concluir</button>

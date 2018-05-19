@@ -21,9 +21,14 @@ class pessoa extends Model
             ->get();
     }
 
-    public static function mudaSenha($id, $nova){ 
-        return self::table('pessoa')
-            ->where('id', $id)
-            ->update(['senha' => $nova]);
+    public static function mudaSenha($id ,$senha){
+
+        $esquecido = self::find($id);
+        
+        if($esquecido) {
+            $esquecido->senha = $senha;
+            $esquecido->save();
+        }
     }
+
 }

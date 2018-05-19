@@ -43,7 +43,7 @@
 <div class ="container">
     <div class ="row">
         <div class = "col-md-12 fonte login2" align = "center">
-            <form action="redefinirSenhaEmail">
+            <form action="emailRedefinirSenha">
                 <label>Digite o seu E-mail</label>
                 </br>
                 <input type="text" class="email" name="email"  placeholder="Digite aqui seu E-mail"/>
