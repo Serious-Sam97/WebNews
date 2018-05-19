@@ -65,6 +65,8 @@ class userController extends Controller
     public static function emailRedefinirSenha(Request $request){
         $all = $request->all();
 
+        $destino = null;
+
         $data = pessoa::retornaUsuarios()->toArray();
 
         foreach($data as $pessoa){
